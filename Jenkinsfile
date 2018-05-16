@@ -16,7 +16,7 @@ pipeline {
                 withSonarQubeEnv('sonarqube') {
                 sonar-scanner.bat -Dsonar.projectKey=marketplace52 
                -Dsonar.organization=pavants52-github 
-             -Dsonar.login=2eb6424b017f76ec050f6085eb95e2877f3b5ed5                }
+              -Dsonar.sources=microservices 
             }
         } 
 
