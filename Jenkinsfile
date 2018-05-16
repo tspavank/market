@@ -14,8 +14,7 @@ pipeline {
         stage("static code analysis"){
             steps {
                 withSonarQubeEnv('sonarqube') {
-sonar-scanner.bat -Dsonar.projectKey=marketplace52 -Dsonar.organization=pavants52-github -Dsonar.sources=. 
--Dsonar.host.url=https://sonarcloud.io -Dsonar.login=2eb6424b017f76ec050f6085eb95e2877f3b5ed5                }
+sonar-scanner.bat -Dsonar.projectKey=marketplace52 -Dsonar.organization=pavants52-github -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=2eb6424b017f76ec050f6085eb95e2877f3b5ed5                }
             }
         } 
 
