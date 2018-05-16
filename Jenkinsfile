@@ -19,7 +19,7 @@ pipeline {
               -Dsonar.sources=microservices 
             }
         } 
-
+        }
         stage("build docker image"){
             steps {
                 sh "docker build -t zervmarket ."
