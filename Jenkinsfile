@@ -11,13 +11,13 @@ pipeline {
             }
         }
 
-        stage("static code analysis"){
+     /*   stage("static code analysis"){
             steps {
                 withSonarQubeEnv('sonarqube') {
                     sh '/opt/sonar/bin/sonar-scanner -Dsonar.projectKey=Zervmarket -Dsonar.sources=api'
                 }
             }
-        }
+        } */
 
         stage("build docker image"){
             steps {
