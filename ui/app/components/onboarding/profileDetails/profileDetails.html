@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<title>Onboarding</title>
+<body ng-app="app">
+<form name="myForm"> 
+<div class="container-fluid" style="padding-right:0px;padding-left:0px">
+	<div class="form-group col-sm-12 col-md-12 col-lg-12">
+		<div class="col-sm-11 col-sm-offset-1">
+			<h5><b>Onboarding</b></h5>
+		</div>
+	</div>
+	<div class="form-group col-xs-12 col-sm-8 col-md-8 col-lg-8 col-sm-offset-2">
+			<ol class="progress1 progress1--large">
+		  <li class="is-complete" data-step="1">
+			External systems
+		  </li>
+		  <li class="is-complete" data-step="2">
+			Company info
+		  </li>
+		  <li class="is-active" data-step="3">
+			Profile details
+		  </li>
+		   <li data-step="4">
+			Add interests
+		  </li> 
+			<li data-step="5">
+			 Token access
+		  </li> 
+			<li data-step="6" class="progress1__last">
+			Confirmation
+		  </li> 
+		</ol>
+		<div class="col-sm-11 col-sm-offset-1 col-xs-12 ">
+			<h3>Please enter the following information about your business</h3>
+		</div>
+		<div class="col-sm-11 col-sm-offset-1 col-xs-12 ">
+			<h4>* Required information</h4>
+		</div>
+		<div class="form-group col-sm-12 col-md-12 col-lg-12">
+			<div class="col-sm-11 col-sm-offset-1">
+				<h4><b>Company Information</b></h4>
+			</div>
+		</div>
+		<div class="form-group col-sm-12 col-md-12 col-lg-12">
+			<div class="form-group col-sm-11 col-sm-offset-2">
+				<div class=" form-group col-sm-12">
+					<div class="col-sm-3 form-group">
+						<label>Company description*</label>
+					</div>
+					<div class="col-sm-5">
+						<textarea type="text" class="form-control" style="height:60px;" name="message" ng-model="message" ng-minlength="10" ng-maxlength="300" required></textarea>
+						<span class="err_style" ng-show="myForm.message.$error.required && myForm.message.$dirty">Company description is Required.</span>
+                        <span class="err_style" ng-show="myForm.message.$error.minlength ">Description should be  at least 10 characters and above.</span>
+                        <span class="err_style" ng-show="myForm.message.$error.maxlength">Description should be below 300 characters</span>	
+					</div>
+				</div>
+				<div class="form-group col-sm-12">
+					<div class="col-sm-3 form-group">
+						<label>Business classification*</label>
+					</div>
+					<div class="col-sm-5">
+						<input type="text" ng-model="value.businessClassification" name="businesstext"  ng-minlength="5" ng-maxlength="50" class="form-control" only-Alphabets required>
+						<span class="err_style" ng-show="myForm.businesstext.$error.required && myForm.businesstext.$dirty">Business classification is Required.</span>
+						<span class="err_style" ng-show="myForm.businesstext.$error.minlength && !myForm.businesstext.$error.required">Business classification should be  at least 5 characters and above.</span>
+						<span class="err_style" ng-show="myForm.businesstext.$error.maxlength">Business classification should be below 50 characters</span>
+					</div>
+				</div>
+				<div class="form-group col-sm-12">
+					<div class="col-sm-3 form-group">
+						<label>Logo</label>
+					</div>
+					<div class="col-sm-5 form-group">
+						<input type="text" ng-model="values.logo" class="form-control"></input>
+					</div>
+					<div class="col-sm-3 form-group">
+						<a style="width:100% padding-top=0px" class="btn btn-default center-block" href="{{hostname}}#/">Upload</a>
+					</div>
+				</div>
+				<div class="form-group col-sm-12">
+					<div class="col-sm-3 form-group">
+						<label>Facebook</label>
+					</div>
+					<div class="col-sm-5">
+						<input type="text" ng-model="values.facebook" class="form-control"/>
+					</div>
+				</div>
+				<div class="form-group col-sm-12">
+					<div class="col-sm-3 form-group">
+						<label>Instagram</label>
+					</div>
+					<div class="col-sm-5">
+						<input type="text" ng-model="values.instagram" class="form-control"/>
+					</div>
+				</div>
+				<div class="form-group col-sm-12">
+					<div class="col-sm-3 form-group">
+						<label>Twitter</label>
+					</div>
+					<div class="col-sm-5">
+						<input type="text" ng-model="values.twitter" class="form-control"/>
+					</div>
+				</div>
+				<div class="form-group col-sm-12">
+					<div class="col-sm-3 form-group">
+						<label>Account type*</label>
+					</div>
+<<<<<<< HEAD
+					<div class="col-sm-5">
+						<select class="form-control" name="accoType" required>
+						  <option value="Supplier">Supplier</option>
+						  <option value="Manufacturer">Manufacturer</option>
+						  <option value="Distributor">Distributor</option>
+						  <option value="Retailer">Retailer</option>
+						  <option value="Consumer">Consumer</option>
+						  <option value="Government">Government</option>
+						</select>
+						<span class="err_style" ng-if="myForm.accType.$error.required && myForm.accType.$dirty">Account type is required.</span>
+=======
+					<div class="form-group col-xs-6 col-sm-4">
+						<button type="button" id="profileDetailsSaveAndClose" style="width:100%" class="btn btn-info center-block" ng-click="onSaveClose('login')">Save and close</button>
+>>>>>>> f1421b67abaad66f697f3ead0a9b938015928c1e
+					</div>
+				</div>
+				<div class="form-group col-sm-12">
+					<div class="col-sm-3 form-group">
+						<label>EIN *</label>
+					</div>
+<<<<<<< HEAD
+					<div class="col-sm-5">
+						<input type="text" ng-model="values.companyInformationEin" class="form-control" name="ein" ng-minlength="9" maxlength="9" ng-maxlength="9" numbers-only ng-required="true">
+						<span class="err_style" ng-if="myForm.ein.$error.required && myForm.ein.$dirty">EIN is required.</span>
+						<span class="err_style" ng-show="myForm.ein.$error.minlength">EIN number should be 9 digits only</span>
+						<span class="err_style" ng-show="myForm.ein.$error.maxlength">EIN number should be 9 digits only</span>
+=======
+					<div class="form-group col-xs-6 col-sm-4">
+						<a style="width:100%" id="profileDetailsNext" class="btn btn-info center-block" ng-click="onSaveClose('addInterests')" href="">Next</a>
+>>>>>>> f1421b67abaad66f697f3ead0a9b938015928c1e
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-sm-12 col-md-12 col-lg-12">
+			<div class="col-sm-11 col-sm-offset-1">
+				<h4><b>license</b></h4>
+			</div>
+		</div>
+		<div class="form-group col-sm-12 col-md-12 col-lg-12">
+			<div class="form-group col-sm-11 col-sm-offset-2">
+				
+				<div class="form-group col-sm-12">
+					<div class="col-sm-3 form-group">
+						<label>FFL license number</label>
+					</div>
+					<div class="col-sm-5 form-group">
+						<input type="text" class="form-control" ng-model="values.fflLicenseNumber" name="fflLicenseNo" ffl-licence-umber ng-pattern="fflLicenseNo"  maxlength="15" ng-required="true">
+						<span class="err_style" ng-if="myForm.fflLicenseNo.$error.required && myForm.fflLicenseNo.$dirty">FFL license number is required.</span>
+						<span class="err_style" ng-show="myForm.fflLicenseNo.$error.pattern">FFL license number format is not correct please enter proper format</span>
+					</div>
+					<div class="col-sm-3 form-group">
+						<a style="width:100%" id="fflLicenseNumberUpload" class="btn btn-default  center-block" href="{{hostname}}#/">Upload</a>
+					</div>
+				</div>
+				<div class="form-group col-sm-12">
+					<div class="col-sm-3 form-group">
+						<label>ATF  license number</label>
+					</div>
+					<div class="col-sm-5 form-group">
+						<input type="text" ng-model="values.atfLicenseNumber" class="form-control"></input>
+					</div>
+					<div class="col-sm-3 form-group">
+						<a style="width:100%" id="atfLicenseNumberUpload" class="btn btn-default  center-block" href="{{hostname}}#/">Upload</a>
+					</div>
+				</div>
+				<div class="form-group col-sm-12">
+					<div class="col-sm-3 form-group">
+						<label>ITAR license number</label>
+					</div>
+					<div class="col-sm-5 form-group">
+						<input type="text" ng-model="values.atarLicenseNumber" class="form-control"></input>
+					</div>
+					<div class="col-sm-3 form-group">
+						<a style="width:100%" id="atarLicenseNumberUpload" class="btn btn-default center-block" href="{{hostname}}#/">Upload</a>
+					</div>
+				</div>
+				<div class="form-group col-sm-12">
+					<div class="col-sm-3 form-group">
+						<label>Business tax license number</label>
+					</div>
+					<div class="col-sm-5 form-group">
+						<input type="text" ng-model="values.businessTaxLicenseNumber" class="form-control"></input>
+					</div>
+					<div class="col-sm-3 form-group">
+						<a style="width:100%" id="businessTaxLicenseNumberUpload" class="btn btn-default  center-block" href="{{hostname}}#/">Upload</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<div class="form-group col-xs-6 col-sm-4" >
+				<button type="button" id="profileDetailsCancel" style="width:100%" class="btn btn-default  center-block">Cancel</button>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4">
+				<button type="button" id="profileDetailsSaveAndClose" style="width:100%"  class="btn btn-info center-block">Save and close</button>
+			</div>
+		</div>	
+		<div class="form-group col-xs-12 col-sm-6" >
+			<div class="form-group col-xs-6 col-sm-4 col-sm-offset-4">
+			<a style="width:100%" id="profileDetailsBack" class="btn btn-default  center-block" href="{{hostname}}#/companyInfo">Back</a>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4">
+				<a style="width:100%" id="profileDetailsNext" class="btn btn-info center-block" href="{{hostname}}#/addInterests">Next</a>
+			</div>
+		</div>	
+</div>
+</form>
+</body>

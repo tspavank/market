@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<title>Vendor</title>
+<body> 
+<div class="container-fluid" style="padding-right:0px;padding-left:0px">
+	<div class="form-group col-xs-12 col-sm-8 col-md-8 col-lg-8 col-sm-offset-2">
+		
+		<div class="form-group col-sm-12 col-xs-12 text-center">
+		<label class="f28"><strong> TRADING PARTNERS</strong></label>
+		</div>
+		<div class="col-sm-12 col-xs-12 text-center">
+		<label class="f15">List of all trading partners with public accounts</label>
+		</div>
+		<div class="col-sm-4 col-sm-offset-8 col-xs-12">
+			<div class="form-group col-sm-3">
+				<label class="f14">Sort by</label>
+			</div>
+		<div class="form-group col-sm-9">
+		<select class="form-control" ng-model="values.sortBy">
+			<option >Name A-Z</option>
+			<option>Rating</option>
+			<option>Service</option>
+			<option>Speed</option>
+		</select>
+		</div>
+		</div>
+		<div class="form-group col-sm-12 col-md-12 col-lg-12">
+		<hr class="hr_cus_vendor">
+			<div class="form-group text-center f30 col-sm-1">
+				<div class="col-sm-12"><label>A</label></div>
+			</div>
+			<div class="form-group col-sm-11">
+				<table class="table" summary="table">
+					<thead class="f18">
+					  <tr>
+						<th>Name</th>
+						<th>Rating</th>
+						<!-- <th>Service</th>
+						<th>Speed</th> -->
+					  </tr>
+					</thead>
+					<tbody class="f15">
+					  <tr ng-repeat="vendor in vendorRate ">
+						<td>{{vendor.Name}}</td>
+						<td id = "{{'apq'+$index}}">{{makeStars(vendor.Product_Quality , 'apq'+$index )}}</td>
+						<!-- <td id = "{{'aser'+$index}}">{{makeStars(vendor.Service , 'aser'+$index )}}</td>
+						<td id="{{'aspeed'+$index}}">{{makeStars(vendor.Speed , 'aspeed'+$index )}}</td> -->
+					  </tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="form-group col-sm-12 col-md-12 col-lg-12">
+			<div class="form-group text-center f30 col-sm-1">
+				<div class="col-sm-12"><label>B</label></div>
+			</div>
+			<div class="form-group col-sm-11">
+				<table class="table" summary="table">
+					<thead class="f18">
+					  <tr>
+						<th>Name</th>
+						<th>Rating</th>
+						<!-- <th>Service</th>
+						<th>Speed</th> -->
+					  </tr>
+					</thead>
+					<tbody class="f15">
+					  <tr ng-repeat="vendor in vendorRate ">
+						<td>{{vendor.Name}}</td>
+						<td id = "{{'bpq'+$index}}">{{makeStars(vendor.Product_Quality , 'bpq'+$index )}}</td>
+						<!-- <td id = "{{'bser'+$index}}">{{makeStars(vendor.Service , 'bser'+$index )}}</td>
+						<td id ="{{'bspeed'+$index}}">{{makeStars(vendor.Speed , 'bspeed'+$index )}}</td> -->
+					  </tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="form-group col-sm-12 col-md-12 col-lg-12">
+			<div class="form-group text-center f30 col-sm-1">
+				<div class="col-sm-12"><label>C</label></div>
+			</div>
+			<div class="form-group col-sm-11">
+				<table class="table" summary="table">
+					<thead class="f18">
+					  <tr>
+						<th>Name</th>
+						<th>Rating</th>
+						<!-- <th>Service</th>
+						<th>Speed</th> -->
+					  </tr>
+					</thead>
+					<tbody class="f15">
+					  <tr ng-repeat="vendor in vendorRate ">
+						<td>{{vendor.Name}}</td>
+						<td id = "{{'cpq'+$index}}">{{makeStars(vendor.Product_Quality , 'cpq'+$index )}}</td>
+						<!-- <td id = "{{'cser'+$index}}">{{makeStars(vendor.Service , 'cser'+$index )}}</td>
+						<td id="{{'cspeed'+$index}}">{{makeStars(vendor.Speed , 'cspeed'+$index )}}</td> -->
+					  </tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="form-group col-sm-12 col-md-12 text-center col-lg-12">
+		<ul class="pagination">
+		<li><a href="#">1</a></li>
+		<li class="active"><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><a href="#">5</a></li>
+		</ul>
+		</div>
+		
+	</div>
+</div>
+</body>

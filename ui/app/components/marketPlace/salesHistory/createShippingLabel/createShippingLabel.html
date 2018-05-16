@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<title>marketplace</title>
+
+<body>
+    <div class="container-fluid" style="padding-right:0px;padding-left:0px">
+        <div class=" col-sm-12">
+            <div class="col-sm-12">
+                <div class="border_2_create_shipping_label col-sm-offset-4 col-sm-4  ">
+                    <h2 class="hed_1_create_shipping_label text-center"><strong>Create shipping label</strong></h2>
+                    <br>
+                    <div class="col-sm-12">
+                        <div class="col-sm-4  col-sm-offset-2">
+                            <h4><strong>Address</strong></h4>
+                        </div>
+                        <div class="col-sm-4">
+                            <p>Manahil Malik
+                                <br> 101,Edgepark Ct
+                                <br> Yorktown,VA 23693</p>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="col-sm-4  col-sm-offset-2">
+                            <h4><strong>Package</strong></h4>
+                        </div>
+                        <div class="col-sm-4">
+                            <p>Package type
+                                <br> 10 lbs
+                                <br> 50*50*50
+                            </p>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="col-sm-4  col-sm-offset-2">
+                            <h4><strong>Speed</strong></h4>
+                        </div>
+                        <div class="col-sm-4">
+                            <p>
+                                <input type="radio" id="speedStandard" ng-model="values.speedStandard" name="optradio">Standard</p>
+                            <p>
+                                <input type="radio" id="speedExpress" ng-model="values.speedExpress" name="optradio">Express</p>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-sm-offset-3 text-center mar_bottom_create_shipping_label">
+                        <button type="button" id="createShippingLabel" ng-model="values.createShippingLabel" class="buton_1_create_shipping_label btn btn-info">Create shipping label</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

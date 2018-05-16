@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+
+<head>
+  <title>Zerv Platform v-4</title>
+ <link rel="stylesheet" type="text/css" href=
+  "//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type=
+  "text/javascript">
+</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="cr_assets/css/checkOutBar.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+<!-- 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+	</script> -->
+  
+  <script src="assets/angular/angular.js" type="text/javascript">
+  </script>
+  <script src="assets/angular/angular-ui-router.min.js" type="text/javascript">
+  </script>
+  <script src="assets/jquery/jquery.min.js" type="text/javascript">
+  
+  </script>
+    <script src="assets/jquery/jquery-ui/jquery-ui.min.js" type="text/javascript">
+</script>
+  <script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript">
+  </script>
+  <script src="app.js" type="text/javascript">
+  </script>
+  <script src="app/components/temp/allpagesController.js" type="text/javascript">
+  </script>
+  <script src="app/components/home/about/aboutController.js" type="text/javascript">
+  </script>
+  <script src="app/components/loggedOut/intakeForm/intakeFormController.js" type="text/javascript">
+  </script>
+  <script src="app/components/loggedOut/userReceivedInvitationLink/invitationLinkController.js" type="text/javascript">
+  </script>
+  <script src="app/components/loggedOut/enterAccountInformation/accountInformationController.js" type="text/javascript">
+  </script>
+  <script src="app/components/loggedOut/enterAccountInformation/accountInformationConfirmation/createdConfirmationController.js" type="text/javascript">
+  </script>
+  <script src="app/components/loggedOut/login/loginController.js" type="text/javascript">
+  </script>
+  <script src="app/components/loggedOut/login/mfaRequest/mfaRequestController.js" type="text/javascript">
+  </script>
+  <script src="app/components/loggedOut/login/mfaChooseMethod/mfaChooseMethodController.js" type="text/javascript">
+  </script>
+  <script src="app/components/loggedOut/login/mfaEnterCodeEmail/mfaEnterCodeEmailController.js" type="text/javascript">
+  </script>
+  <script src="app/components/loggedOut/login/mfaEnterCodePhoneText/mfaEnterCodePhoneTextController.js" type="text/javascript">
+  </script>
+  <script src="app/components/loggedOut/login/mfaEnterCodePhoneCall/mfaEnterCodePhoneCallController.js" type="text/javascript">
+  </script>
+  <script src="app/components/onboarding/externalSystems/externalSystems_1/externalSystemsController.js" type="text/javascript">
+  </script>
+  <script src="app/components/onboarding/externalSystems/externalSystems_2/externalSystemsSelectedController.js" type="text/javascript">
+  </script>
+  <script src="app/components/onboarding/companyInfo/companyInfoController.js" type="text/javascript">
+  </script>
+  <script src="app/components/onboarding/profileDetails/profileDetailsController.js" type="text/javascript">
+  </script>
+  <script src="app/components/onboarding/addInterests/addInterestsController.js" type="text/javascript">
+  </script>
+  <script src="app/components/onboarding/tokenAccess/tokenAccessController.js" type="text/javascript">
+  </script>
+  <script src="app/components/onboarding/confirmation/confirmationController.js" type="text/javascript">
+  </script>
+  <script src="app/components/account/profile/profileController.js" type="text/javascript">
+  </script>
+  <script src="app/components/tradingPartners/viewAtherTradingPartnerProfile/X_personProfileController.js" type="text/javascript">
+  </script>
+  <script src="app/components/tradingPartners/groupsFavorites/groupsFavoritesController.js" type="text/javascript">
+  </script>
+  <script src="app/components/tradingPartners/vendorsController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesOpportunities_Listings/createNewSell_Listing/createNewSellListing_Step-1/createNewSellListing_Step-1Controller.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesOpportunities_Listings/createNewSell_Listing/createNewSellListing_Step-2/createNewSellListing_Step-2Controller.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesOpportunities_Listings/createNewSell_Listing/createNewSellListing_Step-3/createNewSellListing_Step-3Controller.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesOpportunities_Listings/createNewSell_Listing/createNewSellListing_Step-4/createNewSellListing_Step-4Controller.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesOpportunities_Listings/createNewSell_Listing/createNewSellListing_Step-5/createNewSellListing_Step-5Controller.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/activeSellOffers/activeSellOffersController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/activeSellOffers/activeSellOffer_Details/awaitingPaymentController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/activeSellOffers/activeSellOffer_Details/awaitingResponseController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesOpportunities_Listings/salesOpportunities_ListingsController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesOpportunities_Matches/salesOpportunities_Matches/salesOpportunities_MatchesController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesOpportunities_Matches/matchedBuyListingDetails/matchedBuyListingDetailsController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesOpportunities_Matches/matchedBuyListingDetails/placeOfferToSell/placeOfferToSellController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesOpportunities_Matches/matchedBuyListingDetails/placeOfferToSell/placeOfferToSellConfirmation/placeOfferToSellConfirmationController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesOpportunities_Listings/sellListingDetails/sellListingDetails/sellListingDetailsController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesOpportunities_Listings/sellListingDetails/denyBidConfirmation/denyBidConfirmationController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesOpportunities_Listings/sellListingDetails/acceptBidConfirmation/acceptBidConfirmationController.js" type="text/javascript">
+  </script>
+  <script src="app/components/home/about/aboutController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/activeBuyOffers/activeBuyOffersController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/activeBuyOffers/activeBuyOffer_Details/activeBuyOffer_Details_AwaitingPayment/awaitingPaymentController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/activeBuyOffers/activeBuyOffer_Details/activeBuyOffer_Details_AwaitingResponse/awaitingResponseController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/activeBuyOffers/activeBuyOffer_Details/activeBuyOffer_Details_AwaitingPayment/confirmPayment/confirmPaymentController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/activeBuyOffers/activeBuyOffer_Details/activeBuyOffer_Details_AwaitingPayment/confirmPayment/confirmPayment_BidPayment/confirmPayment_BidPaymentController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesOpportunities_Listings/createNewSell_Interest/createNewSell_Interest/createNewSell_InterestController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesOpportunities_Listings/createNewSell_Interest/Confirmation/createNewSell_Interest_ConfirmationController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesHistory/salesHistoryController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesHistory/addTrackingInformation/addTrackingInformationController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesHistory/createShippingLabel/createShippingLabelController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesHistory/shippingLabelCreated/shippingLabelCreatedController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesHistory/viewDetails/viewDetailsController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/salesHistory/rateTransaction/rateTransactionController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/buyingOpportunities_Listings/buyingOpportunities_Listings/buyingOpportunities_ListingsController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/buyingOpportunities_Listings/createNewBuyInterest/createNewBuyInterestController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/buyingOpportunities_Matches/buyingOpportunities_Matches/buyingOpportunities_MatchesController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/buyingOpportunities_Matches/buyNow/buyNowConfirmation/buyNowConfirmationController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/buyingOpportunities_Matches/matchedSellListingDetails/matchedSellListingDetailsController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/buyingOpportunities_Matches/matchedSellListingDetails/placeBid/placeBidController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/buyingOpportunities_Matches/matchedSellListingDetails/placeBid/bidPlacedConfirmation/bidPlacedConfirmationController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/purchasingHistory/purchasingHistoryController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/purchasingHistory/viewPublicTransactions/viewPublicTransactionsController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/purchasingHistory/ratePurchase/ratePurchaseController.js" type="text/javascript">
+  </script>
+  <script src="app/components/marketPlace/purchasingHistory/confirmReceiptOfProduct/confirmReceiptOfProductController.js" type="text/javascript">
+  </script>
+  <script src="app/components/notifications/notificationsController.js" type="text/javascript">
+  </script>
+  <script src="app/components/help/helpController.js" type="text/javascript">
+  </script>
+  <script src="app/components/home/dashboard/dashboardController.js" type="text/javascript">
+	</script>
+	
+  <link rel="stylesheet" type="text/css" href="cr_assets/css/custom.css" />
+  <style media="screen" type="text/css">
+    body {
+      color: #666666;
+    }
+  </style>
+</head>
+
+<!-- apply our angular app to our site -->
+
+<body class="body" style="margin:1px;">
+  <div>
+    <nav class="navbar navbar-default " id="header" ng-controller="democt" style="background-color:#ffffff">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<div class="icon-bar"style="color:transparent">.</div>
+				<div class="icon-bar"style="color:transparent">.</div>
+				<div class="icon-bar"style="color:transparent">.</div>
+			  </button>
+        <img src="cr_assets/images/crlogo.jpg" alt="logo" style="width:80px;height:auto">
+
+      </div>
+      <div class="collapse navbar-collapse navbar-right" id="myNavbar" style="margin-right: 0px;">
+
+        <ul class="nav navbar-nav f18 " style="padding-top:5px;">
+          <!-- <li class="pad_top2 f20 text-left"><a class=" pad_top2 " style="padding-bottom: 0px; color:#00bcd4; padding-right: 200px;" href="{{hostname}}#/temp">ZervPlatform V4</a></li>            -->
+          <li class="pad_top2 "><a class=" pad_top2 " style="padding-bottom: 0px; color:#00bcd4;" href="{{hostname}}#/temp">All Pages</a></li>
+          <li class="pad_top2" ng-show="currentLocation !== '/login' && currentLocation !== '/accountCreationGeneral' && currentLocation !== '/accountCreationContact' && currentLocation !== '/accountCreationLicense' && currentLocation !== '/landingPage'"><a class=" pad_top2" style="padding-bottom: 0px; color:#00bcd4;" href="{{hostname}}#/profile">My Account</a></li>
+          <li ng-show="currentLocation !== '/login' && currentLocation !== '/accountCreationGeneral' && currentLocation !== '/accountCreationContact' && currentLocation !== '/accountCreationLicense' && currentLocation !== '/landingPage'" class="pad_top"><span class="f12 cnt_color">(0)</span>
+            <div style="font-size:25px;" class=" cnt_color fa fa-shopping-cart"></div>
+          </li>
+          <li class="pad_top2" ng-show="currentLocation == '/login' || currentLocation == '/accountCreationGeneral' || currentLocation == '/accountCreationContact' || currentLocation == '/accountCreationLicense' || currentLocation == '/landingPage' "><a class="cnt_color pad_top2 pad_bottom" style="color:#00bcd4; padding-bottom: 0px;" href="{{hostname}}#/login">Login</a></li>
+          <li class="pad_top2"><a class=" pad_top2 " style="padding-bottom: 0px; color:#00bcd4;">FAQ</a></li>
+          <li class="pad_top2"><a class=" pad_top2 " style="padding-bottom: 0px; color:#00bcd4;">Help</a></li>
+          <!--"dropdown-->
+        </ul>
+    </nav>
+    </div>
+    <!-- Page Content -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="dashboard">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12" style="padding:0px;">
+
+              <!-- MAIN CONTENT -->
+              <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT  -->
+              <div>
+                <div ui-view>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- NAVIGATION -->
+
+  <script src="assets/bootstrap/js/bootstrap-datetimepicker.js" type="text/javascript"></script>
+
+</body>
+
+</html>

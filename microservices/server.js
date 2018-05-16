@@ -1,0 +1,56 @@
+
+var express = require('express');
+var path = require('path');
+
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var port = process.env.PORT || 6060;
+
+
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+var url = 'mongodb://localhost/CRDB';
+mongoose.Promise = require('bluebird');
+mongoose.connect(url);
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () {
+
+    console.log("Connected correctly to server");
+});
+
+
+var routes = require('./routes/index');
+var salesListing = require('./routes/addInterest.js');
+
+
+
+var app = express();
+var cors = require('cors');
+
+
+app.use(express.static(__dirname + '/'));
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+
+app.use(cors());
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.header("Access-Control-Allow-Headers", "Content-Type");
+    res.header("Access-Control-Max-Age", "3600");
+
+    next();
+});
+app.use('/', routes);
+app.use('/addInterest', addInterest ) ;
+
+app.listen(port);
+console.log('Magic happens on port ' + port);

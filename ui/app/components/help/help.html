@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<title>help</title>
+<body> 
+<form name="help">
+<div class="container-fluid" style="padding-right:0px;padding-left:0px">
+	<div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12">
+		<div class="col-sm-12 col-xs-12 text-center f25">
+			<label><strong>Help</strong></label>
+		</div>
+	</div>
+	<div class="form-group col-xs-12 col-sm-8 col-md-8 col-lg-8 col-sm-offset-2">
+		<div class="col-sm-12 col-xs-12">
+			<h4>Contact us </h4>
+		</div>
+		<div class="form-group  col-sm-12 col-xs-12">
+		<div class="form-group  col-sm-1 ">
+			<div  class="material-icons" style="font-size:36px">stay_current_portrait</div>
+		</div>
+		<div class="form-group  col-sm-11 col-xs-11">
+			<div  class="material-icons" style="font-size:36px">email</div>
+		</div>
+		</div>
+		<div class="col-sm-12 col-xs-12 ">
+		   <h4>Fill out this form</h4>
+		</div>
+		
+		<div class=" form-group col-sm-12 col-xs-12">
+			<div class=" form-group col-sm-10 col-xs-10">
+				<div class="col-sm-3 col-xs-5 f14">
+					<label>Username</label>
+				</div>
+				<div class="col-sm-5 col-xs-5">
+                    <input class="form-control" name="helpUserName" ng-model="values.helpUserName" type="text" ng-minlength="6" ng-maxlength="12" required>
+                    <span class="err_style" ng-show="help.helpUserName.$error.required && help.helpUserName.$dirty">Enter User Name.</span>
+                    <span class="err_style" ng-show="help.helpUserName.$error.minlength">User Name is to short.</span>
+                    <span class="err_style" ng-show="help.helpUserName.$error.maxlength">User Name is to long.</span>
+                </div>
+			</div>
+		</div>
+		
+		<div class="form-group col-xs-12 col-sm-12">
+           <textarea class="form-control" type="text" name="userNameTextArea" ng-model="values.userNameTextArea" style="height:200px;" ng-minlength="3" required ></textarea>
+            <span class="err_style" ng-show="help.userNameTextArea.$error.required && help.userNameTextArea.$dirty">Enter in text area.</span>
+            <span class="err_style" ng-show="help.userNameTextArea.$error.minlength">Text area length is to short.</span>
+    
+        </div>
+		
+		<div class="form-group col-xs-12 col-sm-12 nolrpad">
+			<div class="form-group col-xs-6 col-sm-3" >
+				<button type="reset" style="width:100%" ng-model="values.helpCancel" id="helpCancel" class="btn btn-default btn-md center-block">Cancel</button>
+			</div>
+			<div class="form-group col-xs-6 col-sm-3 col-sm-offset-6">
+				<button type="button" style="width:100%" ng-model="values.helpSubmit" id="helpSubmit"  class="btn btn-info btn-md center-block">Submit</button>
+			</div>
+		</div>	
+	</div>
+</div>
+</form>
+</body>

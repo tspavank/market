@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<title>Place Offers To Sell</title>
+<body> 
+<div class="container-fluid" style="padding-right:0px;padding-left:0px">
+	<div class=" col-sm-12 col-xs-12">
+		<div class="form-group col-sm-8 col-sm-offset-2">
+			<div class="col-sm-12">
+				<label class="f16"><strong>Listing details</strong></label>
+			</div>
+			<div class="form-group f15 col-xs-12 col-sm-12 border_pack4">
+				<div class="col-sm-4 col-xs-12">
+					<div class="col-sm-12 col-xs-6">
+						<label><strong>Listing name</strong></label>
+					</div>
+					<div class="col-sm-12 col-xs-6">
+						<label>Spring Brass Sales</label>
+					</div>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<div class="col-sm-12 col-xs-6">
+						<label><strong>Buyer information</strong></label>
+					</div>
+					<div class="col-sm-12 col-xs-6">
+						<label>Manahil Malik</label>
+					</div>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<div class="col-sm-12 col-xs-6">
+						<label><strong>Expiration date</strong></label>
+					</div>
+					<div class="col-sm-12 col-xs-6">
+						<label>April 15th, 2018</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-sm-8 col-sm-offset-2 col-xs-12">
+			<div class="col-sm-12">
+				<label class="f16"><strong>Bid Information</strong></label>
+			</div>
+			<div class="form-group f15 col-xs-12 col-sm-8 border_pack4">
+				<div class="col-sm-6 col-xs-12">
+					<div class="col-sm-12">
+						<label><strong>Original</strong></label>
+					</div>
+					<div class="col-sm-12">
+						<label class="f14">Products</label>
+					</div>
+					<div class="col-sm-12">
+						<div class="col-sm-4 no-padding">
+							<img src="cr_assets/images/logo.jpg" style="width:100%" alt="image">
+						</div>
+						<div class="col-sm-8 righ-pad-text">
+							<strong><label class="f14">Brass</label></strong>
+							<label class="f14">Price:30ZERV/pound</label>
+							<label class="f14">Quantity: 10 pounds</label>
+							<label class="f14">Total:300ZERV</label>
+						</div>
+					</div>
+					<div class="col-sm-12 col-xs-12">
+						<strong><label>Payment terms</label></strong>
+					</div>
+					<div class="col-sm-12 col-xs-12">
+						<div class="col-sm-12 col-xs-6">
+							<strong><label>Payment time frame</label></strong>
+						</div>
+						<div class="col-sm-12 col-xs-6">
+							<label>Time of sale</label>
+						</div>
+					</div>
+					<div class="col-sm-12 col-xs-12">
+						<div class="col-sm-12 col-xs-6">
+							<strong><label>Payment method</label></strong>
+						</div>
+						<div class="col-sm-12 col-xs-6">
+							<label>ZERV</label>
+						</div>
+					</div>
+					<div class="col-sm-12 col-xs-12">
+						<div class="col-sm-12 col-xs-6 no-padding">
+							<strong><label>Delivery terms</label></strong>
+						</div>
+						<div class="col-sm-12 col-xs-6 no-padding">
+							<label>15 days</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-xs-12 border_pack_left">
+					<div class="col-sm-12 padding-bottom" >
+						<label><strong>Your offer</strong></label>
+					</div>
+					<div class="col-sm-12">	
+						<div class="col-sm-6 padding-left">
+							<label for="bidInformationPriceFound">Price/Found</label>
+							<input class="form-control" id="bidInformationPriceFound" ng-model="values.bidInformationPriceFound" type="text">
+						</div>
+						<div class="col-sm-6 padding-left">
+							<label for="bidInformationQuantity">Quantity</label>
+							<input class="form-control" id="bidInformationQuantity" ng-model="values.bidInformationQuantity" type="text">
+						</div>
+					</div>
+					<div class="col-sm-12 pad-bottom">
+						<label>Total:    ZERV</label>
+					</div>
+					<div class="col-sm-12 padding-bottom">
+						<select class="form-control selct-width" ng-model="values.bidInformationTimeOfContrast">
+							<option>Time of contrast</option>
+							<option>Listingd</option>
+							<option>Names</option>
+							<option>Select</option>
+						  </select>
+					</div><br>
+					<div class="col-sm-12 padding-bottom">
+						<select class="form-control selct-width" ng-model="values.bidInformationZerv">
+							<option>ZERV</option>
+							<option>Ravi</option>
+							<option>Ramu</option>
+							<option>Krishna</option>
+						  </select>
+					</div><br><br>
+					<div class="col-sm-12">
+						<select class="form-control selct-width" ng-model="values.bidInformationDays">
+							<option>7days</option>
+							<option>9days </option>
+							<option>3days</option>
+							<option>5days</option>
+						  </select>
+					</div>
+				</div>
+			</div>
+			<div class=" form-group col-sm-3 ">
+				<input type="button" class="form-control  text-center" ng-model="values.bidInformation4CompletingBids" id="bidInformation4CompletingBids" value="4 Completing bids"> 
+			</div>
+		</div>
+		<div class="form-group col-sm-8 col-sm-offset-2 col-xs-12">
+			<div class="col-sm-12">
+				<label class="f16"><strong>Shipping Information</strong></label>
+			</div>
+			<div class="form-group f15 col-xs-8 col-sm-6 border_pack4">
+				<div class="col-sm-12">
+					<div class=" form-group col-sm-6">
+						<div class="col-sm-2">
+							<input type="radio">
+						</div>
+						<div class="col-sm-10">
+							<label> Manahil Malik 101 Edgepark Ct Yorktown,VA23693</label>
+						 </div>
+					</div>
+				</div>
+				<div class="col-sm-12">
+					<div class="col-sm-6">
+						<div class="col-sm-2">
+							<input type="radio">
+						</div>
+						<div class="col-sm-10">
+							<label>Enter new shipping address</label>
+						 </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-7 col-sm-offset-5 col-xs-4 col-xs-offset-4">
+			<button type="button" class="btn btn-info wid-butt tp-margin" ng-model="values.shippingInformationPlaceOfferToSell" id="shippingInformationPlaceOfferToSell">Place offer to sell</button>
+		</div>
+	</div>
+</div>
+</body>

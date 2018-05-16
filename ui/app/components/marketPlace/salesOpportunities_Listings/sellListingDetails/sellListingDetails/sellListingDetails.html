@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<title>Onboarding</title>
+
+<body>
+<form name="sellListingDetails" ng-submit="submit()">
+    <div class="container" style="padding-right:0px;padding-left:0px">
+        <div class=" col-sm-12 col-xs-12 col-md-12 col-lg-12">
+            <div class="bids_table_1st form-group col-sm-10 col-sm-offset-1" style="overflow-x:scroll;">
+                <center>
+                    <h3><strong>Bids for Spring Brass Sales</strong><br /></h3>
+                </center>
+                <br>
+                <table class="col-sm-9  table table-hover" summary="Bids for spring brass sales">
+                    <thead>
+                        <tr>
+                            <th>
+                                <select class="table_select_border" ng-model="values.bidsForSpringBrassSalesBidId" required>
+                                    <option>Bid ID</option>
+                                </select>
+                            </th>
+                            <th>
+                                <select class="table_select_border" ng-model="values.bidsForSpringBrassSalesPreferredVendor" required>
+                                    <option>Preferred vendor</option>
+                                </select>
+                            </th>
+                            <th>
+                                <select class="table_select_border" ng-model="values.bidsForSpringBrassSalesPercentMatch" required>
+                                    <option>Percent Match</option>
+                                </select>
+                            </th>
+                            <th>
+                                <select class="table_select_border" ng-model="values.bidsForSpringBrassSalesStatus" required>
+                                    <option>Status</option>
+                                </select>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>09</td>
+                            <td>Yes</td>
+                            <td>90%</td>
+                            <td>Pending</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Yes</td>
+                            <td>30%</td>
+                            <td>Accepted</td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>No</td>
+                            <td>100%</td>
+                            <td>Denied</td>
+                        </tr>
+                        <tr>
+                            <td>033</td>
+                            <td>No</td>
+                            <td>95%</td>
+                            <td>Pending</td>
+                        </tr>
+                        <tr>
+                            <td>233</td>
+                            <td>No</td>
+                            <td>90%</td>
+                            <td>Denied</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bid_info form-group col-sm-10 col-sm-offset-1">
+                <h4><strong>Bid Information</strong></h4>
+                <div class="original1 col-sm-4 col-sm-offset-1">
+                    <h4><strong>Original</strong></h4>
+                    <h5><strong>Products</strong></h5>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <img src="cr_assets/images/logo.jpg" alt="image" width="120" height="60" /></div>
+                        <div class=" col-sm-offset-2 col-sm-5">
+                            <p>Brass
+                                <br>
+                            </p>
+                            <h6>Price:30/pound<br>
+							Quantity:10 pound</h6>
+                        </div>
+                    </div>
+                    <h5><strong>Payment terms</strong></h5>
+                    <div class="col-sm-12">
+                        <h6><strong>Payment time frame</strong></h6>
+                        <h6>Time of sale</h6>
+                        <h6><strong>Payment method</strong></h6>
+                        <h6>ZERV</h6>
+                    </div>
+                    <h5><strong>Delivery terms</strong></h5>
+                    <div class="col-sm-12">
+                        <h6>15 days</h6>
+                    </div>
+                </div>
+                <div class="original2 col-sm-4">
+                    <h4><strong>Original</strong></h4>
+                    <h5><strong>Products</strong></h5>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <img src="cr_assets/images/logo.jpg" alt="image" width="120" height="60" />
+						</div>
+                        <div class="col-sm-offset-2 col-sm-5">
+                            <p>Brass
+                                <br>
+                            </p>
+                            <h6><font color="red">Price:20/pound</font><br>
+								Quantity:10 pound</h6>
+                        </div>
+                    </div>
+                    <h5><strong>Payment terms</strong></h5>
+                    <div class="col-sm-12">
+                        <h6><strong>Payment time frame</strong></h6>
+                        <h6>Time of sale</h6>
+                        <h6><strong>Payment method</strong></h6>
+                        <h6>ZERV</h6>
+                    </div>
+                    <h5><strong>Delivery terms</strong></h5>
+                    <div class="col-sm-12">
+                        <h6><font color="red">30 days</font></h6>
+                    </div>
+                </div>
+                <div class=" col-sm-offset-9 text-center">
+                    <br>
+                    <br>
+                    <div class="fa fa-check-circle" style="font-size:30px;"></div>
+                    <h5>Recommented bid</h5>
+                    <br>
+                    <br>
+                    <h5><input type="checkbox" name="sellListingDetailsSetAsPrivate" ng-model="values.sellListingDetailsSetAsPrivate" id="sellListingDetailsSetAsPrivate" required value="">Set as private</h5>
+					<span class="err_style" ng-show="sellListingDetails.sellListingDetailsSetAsPrivate.$error.required && sellListingDetails.sellListingDetailsSetAsPrivate.$dirty">click Set as private.</span>	
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <button type="button" ng-model="values.sellListingDetailsAcceptBid" id="sellListingDetailsAcceptBid" class="btn b btn-info" ng-disabled="sellListingDetails.$invalid">Accept bid</button>
+                        <br>
+                        <br>
+                        <button type="button" ng-model="values.sellListingDetailsDenyBid" id="sellListingDetailsDenyBid" class="btn b btn-info"  ng-disabled="sellListingDetails.$invalid">Deny bid</button>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <h4><strong>Shipping Information</strong></h4></div>
+                <div class="shipping_info col-sm-4 col-sm-offset-1 mar_bottom">
+                    <p>Manahil Malik
+                        <br> 101, Edgepark CT
+                        <br> Yorktown,VA,23693
+                    </p>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</form>
+</body>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<title>Onboarding</title>
+<body> 
+
+<div class="container-fluid" style="padding-right:0px;padding-left:0px">
+      <div class="col-sm-12 col-xs-12 col-sm-offset-1 f14">
+			<label><a> Selling Opportunities > new Listing</a></label>
+		</div>
+		
+	<div class="form-group col-sm-12 col-md-12 col-lg-12">
+		<div class="col-sm-12 col-xs-12 text-center f25">
+			<label><strong>New Sell Listing</strong></label>
+		</div>
+	</div>
+	<div class="form-group col-xs-12 col-sm-8 col-md-8 col-lg-8 col-sm-offset-2">
+		<ol class="progress1 progress1--large">
+		  <li class="is-complete" data-step="1">
+			Listing details 
+		  </li>
+		  <li class="is-complete"   data-step="2">
+			Project(s) details 
+		  </li>
+		  <li class="is-complete"  data-step="3">
+			Terms of sale
+		  </li>
+		   <li class="is-complete"  data-step="4">
+			Confirmation
+		  </li> 
+		</ol>
+		<div class="form-group col-sm-12 col-sm-offset-0 col-xs-12">
+			<div class="form-group col-sm-12 col-sm-offset-0 col-xs-12">
+				<div class="col-sm-1  text-center">
+						<label class="f22">9</label>
+				</div>
+				<div class="form-group col-sm-11 col-xs-11 col-xs-offset-1 col-sm-offset-0 ">
+					<div class="col-sm-2">
+						<label class="f14">Confirmation</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group col-sm-12 col-xs-12 col-sm-offset-0">
+			<div class="col-sm-12 col-xs-12 border_pack5 pad_top">
+			   <div class="col-sm-12 col-xs-12 pad_top4" >
+				 <div class="col-sm-1  fa fa-info-circle text-center f20" ></div>
+				 <input	class="ComponentsSelect checkboxsize" id="termsAndConditions" ng-model="values.termsAndConditions" type="checkbox" />
+					<label>I accept the terms and conditions associated with creating marketplace listing. specified here </label>
+			    </div>
+			 </div>
+			</div>
+		</div>
+		   <div class="form-group col-xs-12 col-sm-6 pad_top">
+				<div class="form-group col-xs-6 col-sm-4" >
+					<button type="button" style="width:100%"  id="cancel" class="btn btn-default btn-md center-block">Cancel</button>
+				</div>
+				<div class="form-group col-xs-6 col-sm-4">
+					<button type="button" style="width:100%" id="saveAndClose"  class="btn btn-info btn-md center-block">Save and close</button>
+				</div>
+		   </div>	
+			<div class="form-group col-xs-12 col-sm-6 pad_top" >
+				<div class="form-group col-xs-6 col-sm-4 col-sm-offset-4">
+				<a style="width:100%" class="btn btn-default btn-md center-block" id="back" href="{{hostname}}#/createNewSellListing_Step-3">Back</a>
+				</div>
+				<div class="form-group col-xs-6 col-sm-4">
+					<a style="width:100%" class="btn btn-info btn-md center-block" id="publicListing" href="{{hostname}}#/profile">Public Listing</a>
+				</div>
+			</div>		
+	</div>
+</div>
+</body>

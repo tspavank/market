@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<title>Onboarding</title>
+<body ng-app="myApp"> 
+<form name="myForm">
+<div class="container-fluid" style="padding-right:0px;padding-left:0px">
+	<div class="form-group col-sm-12 col-md-12 col-lg-12">
+		<div class="col-sm-11 col-sm-offset-1">
+			<h5><b>Onboarding</b></h5>
+		</div>
+	</div>
+	<div class="form-group col-xs-12 col-sm-8 col-md-8 col-lg-8 col-sm-offset-2">
+		<ol class="progress1 progress1--large">
+		  <li class="is-complete" data-step="1">
+			External systems
+		  </li>
+		  <li class="is-complete" data-step="2">
+			Company info
+		  </li>
+		  <li  class="is-complete" data-step="3">
+			Profile details
+		  </li>
+		   <li  class="is-complete" data-step="4">
+			Add interests
+		  </li> 
+			<li  class="is-active" data-step="5">
+			Token Access
+		  </li> 
+			<li  data-step="6" class="progress1__last">
+			Confirmation
+		  </li> 
+		</ol>
+		<div class="form-group col-sm-12 col-md-12 col-lg-12">
+			<div class="form-group col-sm-11 col-sm-offset-1">
+				<h5><b>Token Public Addresses</b></h5>
+			</div>
+		</div>
+		<div class="form-group col-sm-12 col-md-12 col-lg-12">
+			<div class="form-group col-sm-9 col-sm-offset-3">
+				 <div class="form-group col-sm-12">
+				       <div class="col-sm-5">
+							<div class="bold1"><label for="EITHER Public Address">ETHER Public Address</label></div>
+							<input type="text" name="tokenpublic" ng-model="values.eitherPublicAddress" class="form-control" ng-minlength="3" maxlength="42" my-public-add-directive required>
+							<!--<h1 ng-show = "myForm.tokenpublic.$valid">{{myForm.tokenpublic.$valid}}</h1-->
+							<span class="err_style" ng-if="myForm.tokenpublic.$error.required && myForm.tokenpublic.$dirty">ETHER public address is Required.</span>
+							<span class="err_style" ng-show="myForm.tokenpublic.$error.minlength && !myForm.tokenpublic.$error.required">Enter the address in hexadecimal format</span>
+					 </div>
+                </div>
+				<div class="form-group col-sm-12">
+				   <div class="col-sm-5">
+						<div class="bold1"><label for="EITHER Public Address">ZERV Public Address</label></div>
+						<input type="text" ng-model="values.zervPublicAddress" name="zervpublic" class="form-control" ng-minlength="3" maxlength="42" my-public-add-directive required>
+						<span class="err_style" ng-if="myForm.zervpublic.$error.required && myForm.zervpublic.$dirty">ZERV public address is Required.</span>
+						<span class="err_style" ng-show="myForm.zervpublic.$error.minlength && !myForm.zervpublic.$error.required">Enter the address in hexadecimal format.</span>
+					</div>
+				 </div>
+				<div class="form-group col-sm-12 col-md-12 col-lg-12">
+					<p>If you dont have a token wallet you can create one <a href="#" style="text-decoration:underline"> here</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<div class="form-group col-xs-6 col-sm-4" >
+				<button type="button" id="tokenAccessCancel" style="width:100%" class="btn btn-default btn-sm center-block">Cancel</button>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4">
+				<button type="button" id="tokenAccessSaveAndClose"  style="width:100%"  class="btn btn-info btn-sm center-block" ng-click = "onSaveClose()">Save and close</button>
+			</div>
+		</div>	
+		<div class="form-group col-xs-12 col-sm-6" >
+			<div class="form-group col-xs-6 col-sm-4 col-sm-offset-4">
+			<a style="width:100%" id="tokenAccessBack" class="btn btn-default btn-sm center-block" href="{{hostname}}#/addInterests">Back</a>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4">
+				<a style="width:100%"  id="tokenAccessNext" class="btn btn-info btn-sm center-block" href="{{hostname}}#/confirmation">Next</a>
+			</div>
+		</div>		
+	</div>
+</div>
+</form>
+</body>

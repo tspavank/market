@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<title>Onboarding</title>
+<body> 
+
+<div class="container-fluid" style="padding-right:0px;padding-left:0px">
+      
+	<div class="form-group col-sm-12 col-md-12 col-lg-12">
+		<div class="col-sm-12 col-xs-12 text-center f25">
+			<label><strong>New Sell Listing</strong></label>
+		</div>
+	</div>
+	<div class="form-group col-xs-12 col-sm-8 col-md-8 col-lg-8 col-sm-offset-2">
+		<ol class="progress1 progress1--large">
+		  <li class="is-complete" data-step="1">
+			Listing details 
+		  </li>
+		  <li class="is-complete"   data-step="2">
+			Project(s) details 
+		  </li>
+		  <li class="is-active"  data-step="3">
+			Terms of sale
+		  </li>
+		   <li   data-step="4">
+			Confirmation
+		  </li> 
+		</ol>
+		
+		<div class="form-group col-sm-11 col-xs-11">
+			<div class="col-sm-1 text-center">
+					<label class="f22">6</label>
+			</div>
+			<div class="form-group col-sm-11 col-xs-11 col-xs-offset-1 col-sm-offset-0 ">
+				<div class="col-sm-2">
+					<label class="f14">Payment terms</label>
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-group col-sm-11 col-xs-10 col-xs-offset-2 col-sm-offset-1 ">
+				<div class="col-sm-5 col-sm-offset-1">
+					<label class="f14">Payment time frame</label>
+				</div>
+		</div>
+         <div class="form-group col-sm-11 col-xs-10 col-xs-offset-2 col-sm-offset-1 ">
+			 <div class="col-sm-5 col-sm-offset-1">
+			  <select class="form-control" ng-model="values.paymentTimeFrame">
+					<option value="Time of Control">Time of Control</option>
+					<option value="option">option 1</option>
+					<option value="option">option 2</option>
+					<option value="option">option 3</option>
+					<option value="option">option 4</option>
+					<option value="option">option 5</option>
+			  </select>
+			</div>
+		 </div>
+		  
+		  <div class="form-group col-sm-11 col-xs-10 col-xs-offset-2 col-sm-offset-1 ">
+				<div class="col-sm-5 col-sm-offset-1">
+					<label class="f14">Payment method</label>
+				</div>
+		  </div>
+		  
+		   <div class="form-group col-sm-11 col-xs-10 col-xs-offset-2 col-sm-offset-1 ">
+			 <div class="col-sm-5 col-sm-offset-1">
+			   <select class="form-control" ng-model="values.paymentMethod">
+					<option value="ZERV">ZREV</option>
+					<option value="option">option 1</option>
+					<option value="option">option 2</option>
+					<option value="option">option 3</option>
+					<option value="option">option 4</option>
+					<option value="option">option 5</option>
+			  </select>
+			</div>
+		  </div>
+		  
+		  <div class=" col-sm-11 col-xs-10 col-xs-offset-2 col-sm-offset-1 ">
+			 <div class="col-sm-1 col-sm-offset-1 fa fa-info-circle text-center f20" ></div>
+			 <div class="col-sm-3">
+				 <label>All fees will be paid in <b>ZERV</b></label>
+		     </div>
+		  </div>    
+		  
+		<div class="form-group col-sm-11 col-xs-11">
+			<div class="col-sm-1 text-center">
+					<label class="f22">7</label>
+			</div>
+			<div class="form-group col-sm-11 col-xs-11 col-xs-offset-1 col-sm-offset-0 ">
+				<div class="col-sm-2">
+					<label class="f14">Delivery terms</label>
+				</div>
+			</div>
+		</div>
+		
+
+		
+		  <div class="form-group col-sm-11 col-xs-10 col-xs-offset-2 col-sm-offset-1 ">
+			 <div class="col-sm-5 col-sm-offset-1">
+			   <select class="form-control" ng-model="values.deliveryTerms">
+					<option value="ZERV">7 days</option>
+					<option value="option">option 1</option>
+					<option value="option">option 2</option>
+					<option value="option">option 3</option>
+					<option value="option">option 4</option>
+					<option value="option">option 5</option> 
+			  </select>
+			</div>
+		  </div>
+		
+		<div class="form-group col-sm-11 col-xs-11">
+			<div class="col-sm-1 text-center">
+					<label class="f22">8</label>
+			</div>
+			<div class="form-group col-sm-11 col-xs-11 col-xs-offset-1 col-sm-offset-0 ">
+				<div class="col-sm-2">
+					<label class="f14">Bidder terms</label>
+				</div>
+			</div>
+		</div>
+		
+		  <div class="form-group col-sm-11 col-xs-11 col-xs-offset-1 col-sm-offset-1 ">
+				<div class="col-sm-7">
+					<label class="f14">Who will receive this request?</label>
+				</div>
+		  </div>
+		
+	
+		
+			   <div class="form-group col-xs-11 col-sm-11 col-xs-offset-1 col-sm-offset-1 f14  ">
+					<div class="col-sm-3">
+						<input	class="ComponentsSelect checkboxsize" id="Marketplace" ng-model="values.Marketplace" type="checkbox" />
+						<label >Marketplace</label>
+					</div>
+					<div class="col-sm-3">
+							<input 	class="ComponentsSelect checkboxsize" id="preferredVendors" ng-model="value.preferredVendors" type="checkbox" />
+					
+						<label >Preferred vendors</label>
+					</div>
+					<div class="col-sm-3">
+							<input 	class="ComponentsSelect checkboxsize" id="selectGroup" ng-model="values.selectGroup" type="checkbox"  />
+							<label >select group(s)</label>
+					</div>
+			   </div>
+			   
+			      <div class="form-group col-xs-11 col-sm-11 col-xs-offset-1 col-sm-offset-1 f14  ">
+					<div class="col-sm-3">
+						<input	class="ComponentsSelect checkboxsize"  id="usGovernment" ng-model="values.usGovernment" type="checkbox" />
+						<label >US Government</label>
+					</div>
+					
+					 <div class="col-sm-offset-3 col-sm-3">
+						<div class="input-group">
+                         <input  type="text" class="form-control">
+						  <div class="input-group-addon"><i class="fa fa-search"></i></div>   
+						</div>
+				     </div>
+				  </div>
+				  
+				   <div class="form-group col-xs-11 col-sm-11 col-xs-offset-1 col-sm-offset-1 f14  ">
+					<div class="col-sm-3">
+						<input	class="ComponentsSelect checkboxsize" id="internationalGovernment" ng-model="values.internationalGovernment" type="checkbox" />
+						<label >International Government</label>
+					</div>
+				   </div>
+					
+				  <div class="form-group col-sm-11 col-xs-11 col-xs-offset-1 col-sm-offset-1 pad_top3" >
+					<div class="col-sm-7">
+						<label class="f14">Additional notes</label>
+					</div>
+		         </div>
+				 
+				  <div class="form-group col-sm-11 col-xs-11 col-xs-offset-1 col-sm-offset-1" style="padding-top:0px;">
+					<div class="col-sm-7">
+						 <textarea  class="form-control" id="addtionalNotes" ng-model="values.addtionalNotes" style="height:100px;"></textarea>
+					</div>
+		         </div>
+		
+		    <div class="form-group col-xs-12 col-sm-6">
+				<div class="form-group col-xs-6 col-sm-4" >
+					<button type="button" id="cancel" style="width:100%" class="btn btn-default btn-md center-block">Cancel</button>
+				</div>
+				<div class="form-group col-xs-6 col-sm-4">
+					<button type="button" style="width:100%" id="saveAndClose"  class="btn btn-info btn-md center-block">Save and close</button>
+				</div>
+		   </div>	
+			<div class="form-group col-xs-12 col-sm-6" >
+				<div class="form-group col-xs-6 col-sm-4 col-sm-offset-4">
+				<a style="width:100%" class="btn btn-default btn-md center-block" id="back" href="{{hostname}}#/createNewSellListing_Step-2">Back</a>
+				</div>
+				<div class="form-group col-xs-6 col-sm-4">
+					<a style="width:100%" class="btn btn-info btn-md center-block" id="next" href="{{hostname}}#/createNewSellListing_Step-4">Next</a>
+				</div>
+			</div>		
+	</div>
+</div>
+</body>

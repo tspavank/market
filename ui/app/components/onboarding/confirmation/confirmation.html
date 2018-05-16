@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<title>Onboarding</title>
+<body> 
+<div class="container-fluid" style="padding-right:0px;padding-left:0px">
+	<div class="form-group col-sm-12 col-md-12 col-lg-12">
+		<div class="col-sm-11 col-sm-offset-1">
+			<h5><b>Onboarding</b></h5>
+		</div>
+	</div>
+	<div class="form-group col-xs-12 col-sm-8 col-md-8 col-lg-8 col-sm-offset-2">
+			<ol class="progress1 progress1--large">
+		  <li class="is-complete" data-step="1">
+			External systems
+		  </li>
+		  <li class="is-complete" data-step="2">
+			Company info
+		  </li>
+		  <li class="is-complete" data-step="3">
+			Profile details
+		  </li>
+		   <li class="is-complete" data-step="4">
+			Add interests
+		  </li> 
+			<li class="is-complete" data-step="5">
+			 Token access
+		  </li> 
+			<li data-step="6" class="is-complete">
+			Confirmation
+		  </li> 
+		</ol>
+		
+		
+		<div class=" form-group col-sm-12   col-sm-offset-o">
+			<h4><b>Plaease review all your inputs to confirm. Once you've completed the onboarding process,</b></h4>
+			<h4><b>you can edit your profile via the profile page</b></h4>
+		</div>
+		
+		<div class="form-group jumbotron_cus1 jumbotron  col-sm-12" style="padding-bottom:250px">
+		<div class="col-sm-11"> <label><b>Company Information</b></label></div>
+			<div class="col-sm-1 fa fa-edit f22 text-right"></div>
+		</div>
+		
+			
+		<div class="form-group jumbotron_cus1 jumbotron  col-sm-12" style="padding-bottom:150px">
+		<div class="col-sm-11"> <label><b>Product Details</b></label></div>
+			<div class="col-sm-1 fa fa-edit f22 text-right"></div>
+		</div>
+		
+			<div class="form-group jumbotron_cus1 jumbotron  col-sm-12" style="padding-bottom:150px">
+		<div class="col-sm-11"> <label><b>Profile Details</b></label></div>
+			<div class="col-sm-1 fa fa-edit f22 text-right"></div>
+		</div>
+		
+			<div class="form-group jumbotron_cus1 jumbotron  col-sm-12" style="padding-bottom:150px">
+		<div class="col-sm-11"> <label><b>Interests</b></label></div>
+			<div class="col-sm-1 fa fa-edit f22 text-right"></div>
+		</div>
+			
+			<div class="form-group jumbotron_cus1 jumbotron  col-sm-12 " style="padding-bottom:150px">
+		<div class="col-sm-11"> <label><b>Token access</b></label></div>
+			<div class="col-sm-1 fa fa-edit f22 text-right"></div>
+		</div>
+		
+		
+		<div class="form-group text-center col-sm-12 col-md-12 col-lg-12">
+			<div class=" col-sm-10 col-sm-offset-1">
+				<input type="checkbox" id="acceptTermsAndConditions" ng-model="values.acceptTermsAndConditions"><label>I accept<a>Terms &amp; Conditions</a></label>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<div class="form-group col-xs-6 col-sm-4" >
+				<button type="button" style="width:100%" id="confirmationCancel" class="btn btn-default btn-sm center-block">Cancel</button>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4">
+				<button type="button" style="width:100%" id="confirmationSaveAndClose" class="btn btn-info btn-sm center-block">Save and close</button>
+			</div>
+		</div>	
+		<div class="form-group col-xs-12 col-sm-6" >
+			<div class="form-group col-xs-6 col-sm-4 col-sm-offset-4">
+			<a style="width:100%" class="btn btn-default btn-sm center-block" id="confirmationBack" href="{{hostname}}#/tokenAccess">Back</a>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4">
+				<a style="width:100%" class="btn btn-info btn-sm center-block" id="confirmationCompleteOnboarding" href="{{hostname}}#/profile">Complete onboarding</a>
+			</div>
+		</div>	
+</div>
+</div>
+</body>

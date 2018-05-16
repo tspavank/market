@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<title>marketplace</title>
+
+<body>
+<form name="addTrackingInformation"> 
+    <div class="container-fluid" style="padding-right:0px;padding-left:0px">
+        <div class=" col-sm-12 col-xs-12 col-md-12 col-lg-12">
+
+            <div class="border_1_add_tacking_information col-sm-offset-3 col-sm-6 text-center ">
+                <h2><strong>Add tracking information</strong></h2>
+                <br>
+                <br>
+                <form action="information">
+                    <div class="form-group row col-sm-12">
+                        <div class="col-sm-5 col-sm-offset-1">
+                            <label for="ex1">Carrier name</label>
+                            <input name="carriername" class="form-control" id="ex1" type="text" ng-model="values.carrierName" ng-minlength="2" ng-maxlength="30" required >
+						        <span class="err_style" ng-show="addTrackingInformation.carriername.$error.required && addTrackingInformation.carriername.$dirty">Carrier name is required.</span>
+								<span class="err_style" ng-if="addTrackingInformation.carriername.$error.minlength && !addTrackingInformation.carriername.$error.required">Carrier name name is too short.</span>
+								<span class="err_style" ng-show="addTrackingInformation.carriername.$error.maxlength">Carrier name is too long.</span>
+                        </div>
+                        <div class="col-sm-5">
+                            <label for="ex2">Tacking number</label>
+                            <input class="form-control" id="ex2" type="text" ng-model="values.tackingNumber">
+                            <br>
+                        </div>
+                    </div>
+                </form>
+                <div class="mar_bottom">
+                    <button type="button" class="last_but_add_tacking_information btn btn-info">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>	
+</body>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<title>Onboarding</title>
+<script>
+	$(document).ready(function () {
+
+		$("#datepicker").datepicker();
+		$('#fa-calendar').click(function () {
+			$("#datepicker").focus();
+		});
+	});
+</script>
+
+<body ng-app="myApp">
+	<form name="companyInfo">
+		<div class="container-fluid" style="padding-right:0px;padding-left:0px">
+			<div class="form-group col-sm-12 col-md-12 col-lg-12">
+				<div class="col-sm-12 col-xs-12 text-center f25">
+					<label>
+						<strong>Onboarding</strong>
+					</label>
+				</div>
+			</div>
+			<div class="form-group col-xs-12 col-sm-8 col-md-8 col-lg-8 col-sm-offset-2">
+				<ol class="progress1 progress1--large">
+					<li class="is-complete" data-step="1">
+						External systems
+					</li>
+					<li class="is-active" data-step="2">
+						Company info
+					</li>
+					<li data-step="3">
+						Profile details
+					</li>
+					<li data-step="4">
+						Add interests
+					</li>
+					<li data-step="5">
+						Token access
+					</li>
+					<li data-step="6" class="progress1__last">
+						Confirmation
+					</li>
+				</ol>
+				<div class="col-sm-12 col-xs-12 bgc_j">
+					<div class="form-group col-sm-1 col-xs-3 mar_top_pro ">
+						<div class=" form-group fa fa-warning clo "></div>
+					</div>
+					<div class="form-group col-sm-11 col-xs-9 mar_top_pro mar_bot_pro">
+						<h4>Integration with the SAM system tells the marketplace that your company details are approved by SAM.gov. When you Confirm
+							your details, the marketplace grants you a "SAM badge" to provide other trade partners peace of mind that you are
+							a legitimate trade partner.</h4>
+						<h4>Editing these details negates the due diligence performed by SAM.gov. You may proceed with editing, but will not receive
+							the "SAM badge". To receive the badge, please update your information in the SAM system and update your trade partner
+							profile in the ZERV marketplace</h4>
+					</div>
+				</div>
+				<div class="form-group col-sm-12 text-center col-xs-12">
+					<div class="form-group col-sm-6 col-xs-6 cborder">
+						<h3>SAM</h3>
+					</div>
+					<div class="form-group bgc_jd col-sm-6 col-xs-6 cborder">
+						<h3>Gunbroker</h3>
+					</div>
+				</div>
+				<div class="form-group col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-11 col-sm-offset-1">
+						<h5>
+							<b>Company Information</b>
+						</h5>
+					</div>
+				</div>
+				<div class="form-group col-sm-12 col-md-12 col-lg-12">
+					<div class="form-group col-sm-7 col-sm-offset-2">
+						<div class=" form-group col-sm-12">
+							<div class="col-sm-5">
+								<label>Legal business name</label>
+							</div>
+							<div class="col-sm-7">
+								<input type="text" class="form-control" name="legalBusinessName" ng-model="values.legalBusinessName" ng-maxlength="20" ng-minlength="4"
+								 required>
+								<span class="err_style" ng-show="companyInfo.legalBusinessName.$error.required && companyInfo.legalBusinessName.$dirty">Enter Legal business name.</span>
+								<span class="err_style" ng-show="companyInfo.legalBusinessName.$error.minlength">Legal business name to short.</span>
+								<span class="err_style" ng-show="companyInfo.legalBusinessName.$error.maxlength">Legal business name to long.</span>
+							</div>
+						</div>
+						<div class="form-group col-sm-12">
+							<div class="col-sm-5">
+								<label>Doing business as</label>
+							</div>
+							<div class="col-sm-7">
+								<input type="text" class="form-control" name="doingBusinessAs" ng-model="values.doingBusinessAs" ng-maxlength="20" ng-minlength="4"
+								 required>
+								<span class="err_style" ng-show="companyInfo.doingBusinessAs.$error.required && companyInfo.doingBusinessAs.$dirty">Enter Doing business as.</span>
+								<span class="err_style" ng-show="companyInfo.doingBusinessAs.$error.minlength">Doing business as to short</span>
+								<span class="err_style" ng-show="companyInfo.doingBusinessAs.$error.maxlength">Doing business as to long</span>
+							</div>
+						</div>
+						<div class="form-group col-sm-12">
+							<div class="col-sm-5">
+								<label>Corporate structure description</label>
+							</div>
+							<div class="col-sm-7">
+								<textarea class="form-control" style="height:80px" type="text" name="userMessage" ng-model="values.userMessage" ng-minlength="10"
+								 ng-maxlength="100" required></textarea>
+								<span class="err_style" ng-show="companyInfo.userMessage.$error.required && companyInfo.userMessage.$dirty">Enter Corporate structure description.</span>
+								<span class="err_style" ng-show="companyInfo.userMessage.$error.minlength">Corporate structure description to short.</span>
+								<span class="err_style" ng-show="companyInfo.userMessage.$error.maxlength">Corporate structure description to long.</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group col-sm-12 col-md-12 col-lg-12">
+					<div class="form-group col-sm-7 col-sm-offset-2">
+						<div class=" form-group col-sm-12">
+							<div class="col-sm-5">
+								<label>Mailing address</label>
+							</div>
+							<div class="col-sm-7">
+								<input type="text" name="mailingAddress" ng-model="values.mailingAddress" ng-maxlength="40" ng-minlength="5" required class="form-control">
+								<span class="err_style" ng-show="companyInfo.mailingAddress.$error.required && companyInfo.mailingAddress.$dirty">Enter Mailing address.</span>
+								<span class="err_style" ng-show="companyInfo.mailingAddress.$error.minlength">Mailing address to short.</span>
+								<span class="err_style" ng-show="companyInfo.mailingAddress.$error.maxlength">Mailing address to long.</span>
+							</div>
+						</div>
+						<div class="form-group col-sm-12">
+							<div class="col-sm-2">
+								<label>zip</label>
+							</div>
+							<div class="col-sm-3 col-sm-offset-3">
+								<input type="text" ng-model="values.zip" name="zip" ng-minlength="5" ng-maxlength="5" numbers-only class="form-control" maxlength="5"
+								 required>
+								<span class="err_style" ng-show="companyInfo.zip.$error.required && companyInfo.zip.$dirty">Enter zip number.</span>
+								<span class="err_style" ng-show="companyInfo.zip.$error.minlength">Invalid zip code.</span>
+								<span class="err_style" ng-show="companyInfo.zip.$error.maxlength">Invalid zip code.</span>
+							</div>
+							<div class="col-sm-1">
+								<label>State</label>
+							</div>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" name="state" ng-model="values.state" ng-maxlength="30" ng-minlength="2" only-Alphabets
+								 required>
+								<span class="err_style" ng-show="companyInfo.state.$error.required && companyInfo.state.$dirty">Enter state name.</span>
+								<span class="err_style" ng-show="companyInfo.state.$error.minlength && !companyInfo.state.$error.required">State name to short.</span>
+								<span class="err_style" ng-show="companyInfo.state.$error.maxlength">State name to long.</span>
+							</div>
+						</div>
+						<div class="form-group col-sm-12">
+							<div class="col-sm-5">
+								<label>Country</label>
+							</div>
+							<div class="col-sm-7">
+								<input type="text" class="form-control" name="country" only-Alphabets ng-model="value.country" ng-maxlength="20" ng-minlength="2"
+								 required>
+								<span class="err_style" ng-show="companyInfo.country.$error.required && companyInfo.country.$dirty">Enter Country name.</span>
+								<span class="err_style" ng-show="companyInfo.country.$error.minlength && !companyInfo.country.$error.required">Country name to short.</span>
+								<span class="err_style" ng-show="companyInfo.country.$error.maxlength">Country name to long.</span>
+							</div>
+						</div>
+						<div class="form-group col-sm-12">
+							<div class="col-sm-5">
+								<label>Expiration date</label>
+							</div>
+							<div class="input-group  col-sm-7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             "
+							 style="padding-left:9px">
+								<input type="text" id="datepicker" name="enddate" ng-model="enddate" ng-change="enddatef()" class="form-control   f12" required>
+								<span id="fa-calendar" class="input-group-addon " style="color:transparent">.
+									<a class="fa fa-calendar" style="color:black"></a>
+								</span>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-11 col-sm-offset-1">
+						<h5>
+							<b>Additional Information</b>
+						</h5>
+					</div>
+				</div>
+				<div class="form-group col-sm-12 col-md-12 col-lg-12">
+					<div class="form-group col-sm-7 col-sm-offset-2">
+						<div class=" form-group col-sm-12">
+							<div class="col-sm-5">
+								<label>PSC code</label>
+							</div>
+							<div class="col-sm-7">
+								<input type="text" class="form-control" name="pscCode" ng-model="values.pscCode" numbers-only required>
+								<span class="err_style" ng-show="companyInfo.pscCode.$error.required && companyInfo.pscCode.$dirty">Enter PSC code .</span>
+							</div>
+						</div>
+						<div class="form-group col-sm-12">
+							<div class="col-sm-5">
+								<label>DUNS</label>
+							</div>
+							<div class="col-sm-7">
+								<input type="text" class="form-control" name="duns" ng-model="values.duns" ng-minlength="13" ng-maxlength="13" maxlength="13"
+								 numbers-only required>
+								<span class="err_style" ng-show="companyInfo.duns.$error.required && companyInfo.duns.$dirty">Enter DUNS Number.</span>
+								<span class="err_style" ng-show="companyInfo.duns.$error.minlength">DUNS Number 13 digits only.</span>
+								<span class="err_style" ng-show="companyInfo.duns.$error.maxlength">Invalid DUNS Number.</span>
+							</div>
+						</div>
+						<div class="form-group col-sm-12">
+							<div class="col-sm-5">
+								<label>CAGE</label>
+							</div>
+							<div class="col-sm-7">
+								<input type="text" class="form-control" name="cage" ng-model="values.cage" ng-minlength="5" ng-maxlength="5" maxlength="5"
+								 numbers-only required>
+								<span class="err_style" ng-show="companyInfo.cage.$error.required && companyInfo.cage.$dirty">Enter Cage Number.</span>
+								<span class="err_style" ng-show="companyInfo.cage.$error.minlength">Invalid Cage code.</span>
+								<span class="err_style" ng-show="companyInfo.cage.$error.maxlength">Invalid Cage code.</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-11 col-sm-offset-1">
+						<h5>
+							<b>Certifications</b>
+						</h5>
+					</div>
+				</div>
+
+				<div class="col-sm-11 col-sm-offset-1">
+					<div class="col-sm-12">
+						<div class="col-sm-2 marg_top10">
+							<div class="col-sm-1 text-left cert">
+								<i class="fa fa-certificate font_sz45"></i>
+							</div>
+							<div class="col-sm-2 quol">
+								<div class="col-sm-8 col-sm-offset-3 marg_top20">
+									<h5>Cert 1</h5>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-2 marg_top10">
+							<div class="col-xs-1 text-left cert">
+								<i class="fa fa-certificate font_sz45"></i>
+							</div>
+							<div class="col-sm-2 quol">
+								<div class="col-sm-8 col-sm-offset-3 marg_top20">
+									<h5>Cert 1</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group col-sm-12"></div>
+				<div class="form-group col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-11 col-sm-offset-1">
+						<h5>
+							<b>Please select one of the following:</b>
+						</h5>
+					</div>
+				</div>
+				<div class=" col-sm-12 col-md-12 col-lg-12">
+					<div class=" col-sm-10 col-sm-offset-1">
+						<div class="col-sm-6">
+							<div class=" form-group col-sm-1">
+								<input type="radio" name="iCertify" ng-model="values.iCertify" id="iCertify">
+							</div>
+							<div class=" form-group col-sm-11">
+								<label>I certify that the below information accurately represents my business</label>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class=" form-group col-sm-1">
+								<input type="radio" name="iCertify" ng-model="values.iDoNot" id="iDoNot">
+							</div>
+							<div class=" form-group col-sm-11">
+								<label>I do NOT certify that the below information accurately represents my business and would like to update the info in
+									the external system</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group text-center col-sm-12 col-md-12 col-lg-12">
+					<div class=" col-sm-10 col-sm-offset-1">
+						<input type="checkbox" name="iAccept" ng-model="values.iAccept" id="iAccept" required>
+						<label>I accept
+							<a> Terms &amp; Conditions</a>
+						</label>
+						<br>
+						<span class="err_style" ng-show="companyInfo.iAccept.$error.required && companyInfo.iAccept.$dirty">Please accept Terms &amp; Conditions.</span>
+					</div>
+				</div>
+				<div class="form-group col-xs-12 col-sm-6">
+					<div class="form-group col-xs-6 col-sm-4">
+						<button type="reset" ng-model="values.companyInfoCancel" id="companyInfoCancel" style="width:100%" class="btn btn-default btn-sm center-block">Cancel</button>
+					</div>
+					<div class="form-group col-xs-6 col-sm-4">
+						<button type="button" ng-model="values.companyInfoSaveAndClose" id="companyInfoSaveAndClose" style="width:100%" class="btn btn-info btn-sm center-block"
+						 ng-click="onSaveClose()">Save and close</button>
+					</div>
+				</div>
+				<div class="form-group col-xs-12 col-sm-6">
+					<div class="form-group col-xs-6 col-sm-4 col-sm-offset-4">
+						<a style="width:100%" ng-model="values.companyInfoBack" id="companyInfoBack" class="btn btn-default btn-sm center-block"
+						 href="{{hostname}}#/externalSystemsSelected">Back</a>
+					</div>
+					<div class="form-group col-xs-6 col-sm-4">
+						<a style="width:100%" ng-model="values.companyInfo" id="companyInfoNext" class="btn btn-info btn-sm center-block" href="{{hostname}}#/profileDetails">Next</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<title>Onboarding</title>
+<body ng-app="myApp">
+<form name="addInterests">
+    <div class="container-fluid" style="padding-right:0px;padding-left:0px">
+        <div class="form-group col-sm-12 col-md-12 col-lg-12">
+            <div class="col-sm-11 col-sm-offset-1">
+                <h5><b>Onboarding</b></h5>
+            </div>
+        </div>
+        <div class="form-group col-xs-12 col-sm-8 col-md-8 col-lg-8 col-sm-offset-2">
+            <ol class="progress1 progress1--large">
+                <li class="is-complete" data-step="1">
+                    External systems
+                </li>
+                <li class="is-complete"   data-step="2">
+                    Company info
+                </li>
+                <li class="is-complete"  data-step="3">
+                    Profile details
+                </li>
+                <li class="is-active"  data-step="4">
+                    Add interests
+                </li> 
+                <li data-step="5">
+                    Token access
+                </li> 
+                <li data-step="6" class="progress1__last">
+                    Confirmation
+                </li> 
+            </ol>
+            <div class="col-sm-12">
+                <h3>Set up your first marketplace alert </h3>
+            </div>
+            <div class="form-group col-sm-11 col-xs-11">
+                <div class="col-sm-1 col-xs-2 fa fa-info-circle f25 text-center"></div>
+                <div class="col-sm-11 col-xs-10"> <h4 class="nomartop">Marketplace alerts are collections of information used to match you with opportunities in the marketplace. Here's how it works:</h4></div>
+                <div class="col-sm-8 col-sm-offset-1">
+                    <ol>
+                        <li>Fill out your purchasing preferences below</li>
+                        <li>Create additional marketplace alerts once your initial profile is completed</li>
+                        <li>View matched marketplace opportunities</li>
+                    </ol> 
+                </div>
+            </div>
+            <div class="form-group col-sm-11 col-xs-11">
+                <div class="col-sm-1 text-center">
+                    <label class="f22">1</label>
+                </div>
+                <div class="form-group col-sm-11 col-xs-11 col-xs-offset-1 col-sm-offset-0 ">
+                    <div class="col-sm-2">
+                        <label class="f16">Alert Name</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="text" name="alertName" ng-model="values.alertName" class="form-control input-md" ng-minlength="4" ng-maxlength="20" required >
+                        <span class="err_style" ng-show="addInterests.alertName.$error.required && addInterests.alertName.$dirty">Enter Alert Name.</span>
+                        <span class="err_style" ng-show="addInterests.alertName.$error.minlength">Alert Name is to short.</span>
+                        <span class="err_style" ng-show="addInterests.alertName.$error.maxlength">Alert Name is to long.</span> 
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-sm-11 col-xs-11">
+                <div class="col-sm-1 text-center">
+                    <label class="f22">2</label>
+                </div>
+                <div class="form-group col-sm-11 col-xs-11 col-xs-offset-1 col-sm-offset-0 ">
+                    <div class="col-sm-12">
+                        <label class="f16">Im Interested In </label>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="btn-group " data-toggle="buttons">
+                            <label class="btn btn-default active "id="buy"  ng-click="transactionType('buy')">
+                                <input type="radio"  autocomplete="off " checked ng-model = "values.userinterestsbuying" name="FreeForm "  value = "Yes" >Buying
+                            </label>
+                            <label class="btn btn-default"  id="sell" ng-click="transactionType('sell')">
+                                <input type="radio"  autocomplete="off " ng-model = "values.userinterestsselling" name="FreeForm "  value = "No" >Selling
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-sm-11 col-xs-11">
+                <div class="col-sm-1 text-center">
+                    <label class="f22">3</label>
+                </div>
+                <div class=" col-sm-11 col-xs-11 col-xs-offset-1 col-sm-offset-0 " >
+                    <div class="col-sm-12 ">
+                        <label class="f16">Purchasing Preferences </label>  
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-xs-12 col-sm-12 ">
+                <div class="form-group col-xs-12 col-sm-10 border_pack col-sm-offset-1 ">
+                    <div class=" col-xs-12 col-sm-12 f14">
+                        <div class="form-group col-xs-12 col-sm-12">
+                            <label class="f16">Components</label>
+                        </div>
+                        <div class=" col-xs-12 col-sm-12 f14  ">
+                            <div class="col-sm-3">
+                                <input   id="addInterestsPurchasingPreferencesComponentsSelectAll" ng-change="selectAll_type('PurCompType')" ng-model="values.addInterestsPurchasingPreferencesComponentsSelectAll" class="checkboxsize" type="checkbox" value="ComponentsSelectedall">
+                                <label >Select All </label>
+                            </div>
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-12 f14  ">
+                            <div class="col-sm-3">
+                                <input id="addInterestsPurchasingPreferencesComponentsCase" ng-model="values.addInterestsPurchasingPreferencesComponentsCase" class="ComponentsSelect checkboxsize" type="checkbox"  ng-checked="values.addInterestsPurchasingPreferencesComponentsSelectAll" >
+                                <label >Case  </label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input id="addInterestsPurchasingPreferencesComponentsProjectile" ng-model="values.addInterestsPurchasingPreferencesComponentsProjectile"    class="ComponentsSelect checkboxsize" type="checkbox" value="Projectile"   ng-checked="values.addInterestsPurchasingPreferencesComponentsSelectAll">
+                                <label >Projectile  </label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input id="addInterestsPurchasingPreferencesComponentsGunpowder" ng-model="values.addInterestsPurchasingPreferencesComponentsGunpowder"  class="ComponentsSelect checkboxsize"  type="checkbox"  value="Gunpowder"   ng-checked="values.addInterestsPurchasingPreferencesComponentsSelectAll">
+                                <label >Gunpowder </label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input id="addInterestsPurchasingPreferencesComponentsGunpowderPrimer" ng-model="values.addInterestsPurchasingPreferencesComponentsPrimer" class="ComponentsSelect checkboxsize" type="checkbox" value="Primer"   ng-checked="values.addInterestsPurchasingPreferencesComponentsSelectAll">
+                                <label >Primer </label>
+                            </div>
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-12">
+                            <label class="f16">Ammo Types</label>
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-12 f14  ">
+                            <div class="col-sm-3">
+                                <input id="addInterestsPurchasingPreferencesAmmoTypeSelectAll" ng-change="selectAll_type('PurAmmoType')" ng-model="values.addInterestsPurchasingPreferencesAmmoTypeSelectAll" class="checkboxsize"type="checkbox" value=""/>
+                                <label >Select All </label>
+                            </div>
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-12 f14  ">
+                            <div class="col-sm-3">
+                                <input id="addInterestsPurchasingPreferencesAmmoTypeHandgun" ng-model="values.addInterestsPurchasingPreferencesAmmoTypeHandgun"  class="AmmoTypesSelect checkboxsize" type="checkbox" value="" ng-checked="values.addInterestsPurchasingPreferencesAmmoTypeSelectAll">
+                                <label >Handgun </label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input id="addInterestsPurchasingPreferencesAmmoTypeShotgun" ng-model="values.addInterestsPurchasingPreferencesAmmoTypeShotgun"  class="AmmoTypesSelect checkboxsize" type="checkbox" value="" ng-checked="values.addInterestsPurchasingPreferencesAmmoTypeSelectAll">
+                                <label >Shotgun  </label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input id="addInterestsPurchasingPreferencesAmmoTypeRifle" ng-model="values.addInterestsPurchasingPreferencesAmmoTypeRifle"  class="AmmoTypesSelect checkboxsize" type="checkbox" value="" ng-checked="values.addInterestsPurchasingPreferencesAmmoTypeSelectAll">
+                                <label >Rifle </label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input   id="addInterestsPurchasingPreferencesAmmoTypeRimfire" ng-model="values.addInterestsPurchasingPreferencesAmmoTypeRimfire" class="AmmoTypesSelect checkboxsize"  type="checkbox" value="" ng-checked="values.addInterestsPurchasingPreferencesAmmoTypeSelectAll">
+                                <label >Rimfire</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-12">
+                            <label class="f16">Brand</label>
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-12 f14  ">
+                            <div class="col-sm-3">
+                                <input id="addInterestsPurchasingPreferencesBrandSelectAll" ng-change="selectAll_type('PurBrand')"   ng-model="values.addInterestsPurchasingPreferencesBrandSelectAll"  class="checkboxsize"  type="checkbox" value=""/>
+                            <label >Select All </label>
+                            </div>
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-12 f14  ">
+                            <div class="col-sm-3">
+                                <input   id="addInterestsPurchasingPreferencesBrandWinchester" ng-model="values.addInterestsPurchasingPreferencesBrandWinchester" class="BrandSelect checkboxsize" type="checkbox" value="" ng-checked="values.addInterestsPurchasingPreferencesBrandSelectAll" >
+                                <label >Winchester  </label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input   id="addInterestsPurchasingPreferencesBrandRemington" ng-model="values.addInterestsPurchasingPreferencesBrandRemington"  class="BrandSelect checkboxsize" type="checkbox" value="" ng-checked="values.addInterestsPurchasingPreferencesBrandSelectAll">
+                                <label >Remington </label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input id="addInterestsPurchasingPreferencesBrandFederal" ng-model="values.addInterestsPurchasingPreferencesBrandFederal"    class="BrandSelect checkboxsize" type="checkbox" value="" ng-checked="values.addInterestsPurchasingPreferencesBrandSelectAll">
+                                <label >Federal </label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input id="addInterestsPurchasingPreferencesBrandFiocchi" ng-model="values.addInterestsPurchasingPreferencesBrandFiocchi"    class=" BrandSelect checkboxsize" type="checkbox" value="" ng-checked="values.addInterestsPurchasingPreferencesBrandSelectAll">
+                                <label >Fiocchi </label>
+                            </div>
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-12">
+                            <label class="f16">Trade Partners</label>
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-12 f14  ">
+                            <div class="col-sm-3">
+                                <input id="addInterestsPurchasingPreferencesTradePartnersSelectAll" ng-change="selectAll_type('PurTradePart')"   ng-model="values.addInterestsPurchasingPreferencesTradePartnersSelectAll" class="checkboxsize" type="checkbox" value=""/>
+                                <label >Select All </label>
+                            </div>
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-12 f14  ">
+                            <div class="col-sm-3">
+                                <input id="addInterestsPurchasingPreferencesTradePartnersUsGovernment" ng-model="values.addInterestsPurchasingPreferencesTradePartnersUsGovernment"  class="TradePartnersSelect checkboxsize" type="checkbox" value="" ng-checked="values.addInterestsPurchasingPreferencesTradePartnersSelectAll">
+                                <label >US Government   </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <input id="addInterestsPurchasingPreferencesTradePartnersInternational" ng-model="values.addInterestsPurchasingPreferencesTradePartnersInternational"    class="TradePartnersSelect checkboxsize"type="checkbox" value="" ng-checked="values.addInterestsPurchasingPreferencesTradePartnersSelectAll">
+                                <label >International Government </label>
+                            </div>
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-12">
+                            <label class="f16">Terms of Sale</label>
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-12 f14  ">
+                            <div class="col-sm-3">
+                            <input id="addInterestsPurchasingPreferencesTermsOfSaleSelectAll" ng-model="values.addInterestsPurchasingPreferencesTermsOfSaleSelectAll" ng-change="selectAll_type('PurTimeOfSale')"  class="checkboxsize" type="checkbox" value="" />
+                            <label>Select All </label>
+                        </div>
+                    </div>
+                        <div class="form-group col-xs-12 col-sm-12 f14  ">
+                            <div class="col-sm-3">
+                                <input  id="addInterestsPurchasingPreferencesTermsOfSaleImmediate" ng-model="values.addInterestsPurchasingPreferencesTermsOfSaleImmediate"   class="TermsofSaleSelect checkboxsize" type="checkbox" value=""/>
+                                <label>Immediate</label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input id="addInterestsPurchasingPreferencesTermsOfSaleWithinThirtyDays" ng-model="values.addInterestsPurchasingPreferencesTermsOfSaleWithinThirtyDays"  class="TermsofSaleSelect checkboxsize" type="checkbox" value=""/>
+                                <label > Within 30 Days</label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input id="addInterestsPurchasingPreferencesTermsOfSaleThirtyDaysOrMore" ng-model="values.addInterestsPurchasingPreferencesTermsOfSaleThirtyDaysOrMore"  class="TermsofSaleSelect checkboxsize" type="checkbox" value=""/>
+                                <label> 30 Days or More </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-xs-12 col-sm-6">
+                <div class="form-group col-xs-6 col-sm-4" >
+                    <button type="button" id="addInterestsCancel" ng-model="values.addInterestsCancel" style="width:100%" class="btn btn-default btn-sm center-block">Cancel</button>
+                </div>
+                <div class="form-group col-xs-6 col-md-4">
+                    <button type="button" id="addInterestsSaveAndClose" ng-model="values.addInterestsSaveAndClose" style="width:100%"  class="btn btn-info btn-sm center-block" ng-click="onSaveClose()">Save and close</button>
+                </div>
+            </div>    
+            <div class="form-group col-xs-12 col-sm-6" >
+                <div class="form-group col-xs-6 col-sm-4 col-sm-offset-4">
+                    <a style="width:100%" id="addInterestsBack" ng-model="values.addInterestsBack" class="btn btn-default btn-sm center-block" href="{{hostname}}#/profileDetails">Back</a>
+                </div>
+                <div class="form-group col-xs-6 col-sm-4">
+                    <a style="width:100%" id="addInterestsNext" ng-model="values.addInterestsNext" class="btn btn-info btn-sm center-block" href="{{hostname}}#/tokenAccess">Next</a>
+                </div>
+            </div>        
+        </div>
+    </div>
+</form>
+</body>

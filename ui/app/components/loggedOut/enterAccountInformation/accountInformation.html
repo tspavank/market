@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<title>ZervPlatform</title>
+
+<body>
+	<form name="accoutinformation" ng-submit="submit()">
+		<div class="container-fluid text-center ">
+			<div class="form-group text-left">
+				<div class="col-sm-10 col-sm-offset-1 ">
+					<div class="form-group col-xs-12 col-sm-6 col-sm-offset-3 border_cus_login" style="margin-top:8%;">
+						<div class="form-group text-center  col-xs-12 col-sm-12">
+							<h1>Zerv Platform</h1>
+						</div>
+						<div class="form-group text-center  col-xs-12 col-sm-12">
+							<h3>Create account</h3>
+						</div>
+						<div class="col-xs-12 col-sm-12">
+							<div class="col-sm-12 ">
+								<div class="col-sm-12">
+									<div class="col-sm-3">
+										<label class="pad_top2">Email</label>
+									</div>
+									<div class="col-sm-7 col-xs-11 ">
+										<div class="input-group form-group">
+											<span class="input-group-addon">
+												<i class="fa fa-user"></i>
+											</span>
+											<input id="eml" type="email" ng-pattern="eml_add" ng-model="values.email" class="form-control" name="email" placeholder="Email"
+											 required>
+										</div>
+										<span class="err_style" ng-if="accoutinformation.email.$error.required && accoutinformation.email.$dirty">Email is required.</span>
+										<span class="err_style" ng-show="accoutinformation.email.$error.pattern">Invalid email address.</span>
+									</div>
+								</div>
+
+								<div class="col-sm-12">
+									<div class="col-sm-3">
+										<label class="pad_top2">Password</label>
+									</div>
+									<div class="col-sm-7 col-xs-11 ">
+										<div class="input-group form-group">
+											<span class="input-group-addon">
+												<i class="fa fa-lock"></i>
+											</span>
+											<input type="password" name="pass" id="password-field" placeholder="Password" ng-model="values.accInfoPassword" ng-model-options="{allowInvalid: true}"
+											 pattern-validator="((?=.*\d)(?=.*[A-Z])(?=.*\W).{8,8})" class="form-control" required>
+										</div>
+									</div>
+									<div toggle="#password-field" class="col-sm-1 col-xs-1 pad_top2 fa fa-eye f20 toggle-password">
+									</div>
+									<div class="col-sm-7 col-xs-11 col-sm-offset-3">
+										<password-strength ng-model="values.accInfoPassword"></password-strength>
+										<span class="err_style" ng-show="accoutinformation.pass.$error.required && accoutinformation.pass.$dirty">Password is required.</span>
+										<span class="err_style" ng-if="!(values.accInfoPassword.length>7) && accoutinformation.pass.$dirty && !accoutinformation.pass.$error.required">Password should more than 7 digits.</span>
+									</div>
+								</div>
+
+								<div class="col-sm-12">
+									<div class="col-sm-3 col-xs-6">
+										<label class="pad_top2 ">Phone Number</label>
+									</div>
+									<div class="col-sm-3 col-xs-8">
+										<div class="input-group form-group">
+											<span class="input-group-addon">
+												<i class="fa fa-phone"></i>
+											</span>
+											<select class="form-control" name="phoneCode" ng-model="values.phoneCode" ng-required="true">
+												<option>+1</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group padding-left col-sm-4">
+										<input id="phoneno" type="text" ng-required="true" ng-pattern="ph_numbr" autocomplete="off" ng-model="values.phonenumber"
+										 numbers-Only class="form-control" name="phonenumber" placeholder="Phone number">
+										<span class="err_style" ng-if="accoutinformation.phonenumber.$error.required && accoutinformation.phonenumber.$dirty">This is required</span>
+										<span class="err_style" ng-show="accoutinformation.phonenumber.$error.pattern">Invalid number</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-12">
+							<div class="col-sm-12 text-center">
+								<div class=" form-group col-xs-7 col-xs-offset-2 col-sm-7  col-sm-offset-3">
+									<button type = "submit"style="text-decoration:none;" class="btn btn-block  btn-info btn-md center-block" id="accInfoNext" ng-disabled="accoutinformation.$invalid">NEXT</button>
+								</div>
+								<div class="form-group text-center col-xs-12 col-sm-9 col-sm-offset-2 padding-left">
+									<label>Having trouble logging in.
+										<a href="{{hostname}}#/accountCreationGeneral"> Click here</a> for help</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>

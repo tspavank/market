@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<title>Onboarding</title>
+   <script type="text/javascript">
+  $(document).ready(function() {
+  $("#publishDate").datepicker();
+  $('#publishDateCalendar').click(function() {
+    $("#publishDate").focus();
+  });
+}); 
+ $(document).ready(function() {
+  $("#expirationDate").datepicker();
+  $('#expirationDateCalendar').click(function() {
+    $("#expirationDate").focus();
+  });
+});
+  </script>
+<body> 
+<div class="container-fluid" style="padding-right:0px;padding-left:0px">
+		<div class="form-group col-sm-12 col-lg-12">
+			<div class="form-group col-sm-12 text-center">
+				<label class="f25"><strong> New Sell Listing</strong></label>
+			</div>
+		</div>
+		<div class="form-group col-sm-8 col-lg-8 col-sm-offset-2">
+			<ol class="progress1 progress1--large">
+				<li class="is-active" data-step="1">
+					Listing details
+				</li>
+				<li data-step="2">
+					Product(s) details
+				</li>
+				<li data-step="3">
+					Terms of sale
+				</li>
+				<li data-step="4">
+				Confirmation
+				</li>  
+			</ol>
+			<div class="form-group col-sm-12 ">
+				<div class=" f20  col-sm-1 col-sm-offset-1">
+					<label>1</label>
+				</div>
+				<div class="col-sm-3 f22">
+					<label>Publish date</label>
+					<div class=" input-group">
+							<input type="text" id="publishDate" ng-model="values.publishDate" ng-change="enddatef()"class="form-control f12">
+								<span id="publishDateCalendar" class="input-group-addon " style="color:transparent">.<a class="fa fa-calendar" style="color:black"></a></span>  
+						</div>
+				</div> 
+				<div class="col-sm-3 f22">
+					<label>Expiration date</label>
+					<div class=" input-group">
+						<input type="text" id="expirationDate" ng-model="values.expirationDate" ng-change="enddatef()"class="form-control f12">
+							<span id="expirationDateCalendar" class="input-group-addon " style="color:transparent">.<a class="fa fa-calendar" style="color:black"></a></span>  
+					</div>
+				</div>
+			</div>
+			<div class="form-group col-sm-12 ">
+				<div class="col-xs-2 f20 col-sm-1 col-sm-offset-1">
+					<label>2</label>
+				</div>
+				<div class=" f22 col-sm-10">
+					<label>Is this a one-time or recurring marketplace request?</label>
+				</div>
+			</div>
+			<div class="form-group col-sm-10 col-sm-offset-2">
+				<div class="col-sm-12 nolrpad form-group">
+					<div class="col-sm-3 np ">
+						<input type="checkbox" id="oneTimeRequest" ng-model="values.oneTimeRequest" name="oneTimeRequest"> One-time request
+					</div>
+					<div class="col-sm-3">
+						<input type="checkbox" id="recurringRequest" ng-model="values.recurringRequest"  name="recurringRequest"> Recurring request
+					</div>
+				</div>
+				<div class ="col-sm-12 form-group">
+						<div class="col-sm-3 nolrpad">
+							<input type="checkbox" id="autoReListIfFulfillment" ng-model="values.autoReListIfFulfillment" name="text"> Auto re-list if fulfillment &nbspis<100% 
+						</div>
+						<div class="col-sm-4 nolrpad ">
+							  <div class="btn-group lft_ctr_tbl_marg">
+									<button type="button" id="daily" class="btn btn-default">Daily</button>
+									<button type="button" id="weekly" class="btn btn-default">Weekly</button>
+									<button type="button" id="monthly" class="btn btn-default">Monthly</button>
+							  </div>
+						</div>
+				</div>
+			</div>    
+			<div class="form-group col-sm-12">
+				<div class="col-xs-2 f20 col-sm-1 col-sm-offset-1">
+					<label>3</label>
+				</div>
+				<div class="f22 col-sm-10">
+					<label>Select a template or create a new request</label>
+				</div>
+			</div>
+			<div class="form-group col-sm-10 col-sm-offset-2">
+				<div class="col-sm-12 np">
+					<div class="col-sm-3 col-lg-2 np">
+						<p><strong>Template name</strong></p>
+						<form action="form">
+							<select class="form-control" ng-model="values.templateName">
+								<option></option>
+								<option>Krishna</option>
+								<option>Rama</option>
+							</select>
+						</form>
+					</div>
+				</div>
+				<div class="col-sm-12 np"><br>
+					<div class="col-sm-3 col-lg-2 np">
+						<p><strong>Request name</strong></p>
+						<input type="text" class="form-control" id="requestName" ng-model="values.requestName" >
+					</div>
+					<div class="col-sm-3">
+						<p style="color:white">Request name</p>
+						<input type="checkbox" id="saveAsTemplate" ng-model="values.saveAsTemplate" > save as template
+					</div>
+				</div>
+			</div>
+			<div class="form-group  col-sm-12">
+				<div class="form-group col-lg-2 col-sm-2 col-sm-offset-1" >
+					<button type="button" style="width:100%" id="cancel" class="btn btn-default btn-sm center-block">Cancel</button>
+				</div>
+				<div class="form-group col-lg-2 col-sm-2">
+					<button type="button" style="width:100%" id="saveAndClose" class="btn btn-info btn-sm center-block">Save & close</button>
+				</div>
+				<div class="form-group col-lg-2 col-sm-2 col-sm-offset-5">
+					<button type="button" style="width:100%" id="next" class="btn btn-info btn-sm center-block">Next</button>
+				</div>
+			</div>    
+		</div>
+</div>
+</body>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<title>Onboarding</title>
+   <script type="text/javascript">
+  $(document).ready(function() {
+  $("#manufactureDate").datepicker();
+  $('#manufactureDateCalendar').click(function() {
+    $("#manufactureDate").focus();
+  });
+});
+  </script>
+<body> 
+<div class="container-fluid" style="padding-right:0px;padding-left:0px">
+			<div class="form-group col-sm-12 col-md-12 col-lg-12">
+				<div class="form-group col-sm-12 col-xs-12 text-center">
+				<label class="f25"><strong> New Sell Listing</strong></label>
+				</div>
+			</div>
+			<div class="form-group col-xs-12 col-sm-8 col-md-8 col-lg-8 col-sm-offset-2">
+					<ol class="progress1 progress1--large">
+				  <li class="is-complete" data-step="1">
+					Listing details
+				  </li>
+				  <li class="is-active" data-step="2">
+					 Product(s) details
+				  </li>
+				  <li data-step="3">
+					Terms of sale
+				  </li>
+				   <li data-step="4">
+					Confirmation
+				  </li>  
+				</ol>
+				<div class="form-group col-sm-12 col-xs-12">
+					<div class="col-xs-2 f20 text-center col-sm-1 col-sm-offset-1">
+						<label>4 </label>
+					</div>
+					<div class="col-xs-10 f22 col-sm-10">
+						<label>Add products </label>
+					</div>
+				</div>
+				<div class="form-group col-sm-10 col-sm-offset-1 col-xs-12 border_pack1">
+					<div class="form-group col-xs-12 f16 col-sm-12">
+						<div class="col-sm-12 f18">
+						<label>Product details </label>
+						</div>
+						<div class="col-sm-4">
+						<label>Product name </label>
+						<input type="text" id="productName" ng-model="values.productName" class="form-control"/>
+						</div>
+						<div class="col-sm-4">
+						<label>Product Notes </label>
+						<input type="text" id="productNotes" ng-model="values.productNotes"  class="form-control"/>
+						</div>
+					</div>
+					<div class="form-group col-xs-12 f16 col-sm-12">
+						<div class="col-sm-4">
+						<label>Product type </label>
+						<select class="form-control" ng-model="values.productType">
+						<option>Brass</option>
+						<option>opt2</option>
+						<option>opt3</option>
+						<option>opt4</option>
+						</select>
+						</div>
+						<div class="col-sm-4">
+						<label>Manufacture date </label>
+						<div class=" input-group">
+							<input type="text" id="manufactureDate" ng-model="values.manufactureDate" ng-change="enddatef()"class="form-control f12">
+							  <span id="manufactureDateCalendar" class="input-group-addon " style="color:transparent">.<a class="fa fa-calendar" style="color:black"></a></span>   
+						</div> 
+						</div>
+					</div>
+					<div class="form-group col-xs-12 f16 col-sm-12">
+						<div class="col-sm-4">
+						<label>Product origin city </label>
+						<input type="text" id="productOriginCity" ng-model="values.productOriginCity" class="form-control"/>
+						</div>
+						<div class="col-sm-4">
+						<label>Product origin state </label>
+						<select class="form-control" ng-model="values.productOriginState">
+						<option>virgina</option>
+						<option>opt2</option>
+						<option>opt3</option>
+						<option>opt4</option>
+						</select>
+						</div>
+						<div class="col-sm-4">
+						<label>Product origin country </label>
+						<select class="form-control" ng-model="values.productOriginCountry">
+						<option>United States</option>
+						<option>opt2</option>
+						<option>opt3</option>
+						<option>opt4</option>
+						</select>
+						</div>
+					</div>
+					<div class="form-group col-xs-12 f16 col-sm-12">
+						<div class="col-sm-12 f18">
+						<label>Packaging  details </label>
+						</div>
+						<div class="col-sm-4">
+						<label>Package units</label>
+						<select class="form-control" ng-model="values.packageUnits">
+						<option>opt1</option>
+						<option>opt2</option>
+						<option>opt3</option>
+						<option>opt4</option>
+						</select>
+						</div>
+						<div class="col-sm-4">
+						<label>Package  type</label>
+						<select class="form-control"  ng-model="values.packageType">
+						<option>opt1</option>
+						<option>opt2</option>
+						<option>opt3</option>
+						<option>opt4</option>
+						</select>
+						</div>
+						<div class="col-sm-4">
+						<label>Package container</label>
+						<select class="form-control"  ng-model="values.packageContainer">
+						<option>opt1</option>
+						<option>opt2</option>
+						<option>opt3</option>
+						<option>opt4</option>
+						</select>
+						</div>
+					</div>
+					<div class="form-group col-xs-12 f16 col-sm-12">
+						<div class="col-sm-4">
+						<label>Product quantity </label>
+						<input type="text" class="form-control" id="productQuantity" ng-model="values.productQuantity"/>
+						</div>
+						<div class="col-sm-4">
+						<label>Lot number </label>
+						<input type="text" class="form-control" id="lotNumber" ng-model="values.lotNumber" />
+						</div>
+					</div>
+					<div class="form-group col-xs-12 f16 col-sm-12">
+						<div class="col-sm-12 f18">
+						<label>Pricing details </label>
+						</div>
+						<div class="col-sm-4">
+						<label>Price per unit </label>
+						<input type="text" class="form-control" id="pricePerUnit" ng-model="values.pricePerUnit" />
+						</div>
+						<div class="col-sm-4">
+						<label>Total price </label>
+						<input type="number" class="form-control" id="totalPrice" ng-model="values.totalPrice"/>
+						</div>
+					</div>
+					<div class="form-group col-xs-12 f16 col-sm-12">
+						<div class="form-group col-xs-6 col-sm-4 col-sm-offset-4">
+							<button type="button" id="addProduct" style="width:100%"  class="btn btn-info btn-sm center-block">Add Product</button>
+						</div>
+					</div>	
+				</div>
+				<div class="form-group col-sm-12 col-xs-12">
+					<div class="col-xs-2 f20 text-center col-sm-1 col-sm-offset-1">
+						<label>5</label>
+					</div>
+					<div class="col-xs-10 f22 col-sm-10">
+						<label>Review products</label>
+					</div>
+				</div>
+				<div class="form-group col-sm-10 col-sm-offset-1 col-xs-12">
+				  <div class="col-sm-12 alert alert-dismissible" style="background-color:#cccccc;margin-bottom:0px " >
+					<button type="button" id="reviewProductsRemove" class="close" data-dismiss="alert"><a class="fa fa-remove tohover f25" ></a></button>
+				   
+					<button type="button" id="reviewProductsEdit" class="close"> <a class="fa fa-pencil tohover f25" ></a></button>
+				   
+				   <div class="col-sm-2">
+					  Product name:
+				   </div>
+				   <div class="col-sm-6">
+					 Brass Unit Price: 30ZERV/pound    Total price: 300ZERV
+				   </div>
+					</div>
+					</div>	
+				
+				<div class="form-group col-xs-12 col-sm-6">
+					<div class="form-group col-xs-6 col-sm-4" >
+						<button type="button" id="cancel" style="width:100%" class="btn btn-default btn-sm center-block">Cancel</button>
+					</div>
+					<div class="form-group col-xs-6 col-sm-4">
+						<button type="button" style="width:100%" id="saveAndClose"  class="btn btn-info btn-sm center-block">Save and close</button>
+					</div>
+				</div>	
+				<div class="form-group col-xs-12 col-sm-6" >
+					<div class="form-group col-xs-6 col-sm-4 col-sm-offset-4">
+					<input type="button" style="width:100%" class="btn btn-default btn-sm center-block"  id="back" value="Back" href="{{hostname}}#/createNewSellListing_Step-1">
+					</div>
+					<div class="form-group col-xs-6 col-sm-4">
+						<input type="button" style="width:100%" class="btn btn-info btn-sm center-block" id="next" value="Next" href="{{hostname}}#/createNewSellListing_Step-3">
+					</div>
+				</div>	
+</div>
+</div>
+</body>
